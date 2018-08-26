@@ -1,13 +1,13 @@
 import {
-  DocumentFormattingEditProvider, TextDocument, TextEdit,
-  workspace, WorkspaceConfiguration, Position, Range
+  DocumentFormattingEditProvider, Position, Range, TextDocument,
+  TextEdit, workspace, WorkspaceConfiguration
 } from 'vscode';
 
 const prettier = require('prettier');
 
 export class SCSSFormatter implements DocumentFormattingEditProvider {
 
-  provideDocumentFormattingEdits(document: TextDocument): TextEdit[] {
+  public provideDocumentFormattingEdits(document: TextDocument): TextEdit[] {
     return this.formatDocument(document);
   }
 

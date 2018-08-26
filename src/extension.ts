@@ -1,7 +1,7 @@
 'use strict';
 
 import {
-  DocumentSelector, ExtensionContext, Disposable,
+  Disposable, DocumentSelector, ExtensionContext,
   languages, window
 } from 'vscode';
 
