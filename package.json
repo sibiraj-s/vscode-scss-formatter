@@ -1,0 +1,71 @@
+{
+  "name": "vscode-scss-formatter",
+  "displayName": "SCSS Formatter",
+  "description": "A Visual Studio Code Extension to format SCSS",
+  "version": "1.0.0",
+  "publisher": "Sibiraj-S",
+  "licence": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sibiraj-S/vscode-scss-formatter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Sibiraj-S/vscode-scss-formatter/issues"
+  },
+  "homepage": "https://github.com/Sibiraj-S/vscode-scss-formatter",
+  "engines": {
+    "vscode": "^1.26.0"
+  },
+  "icon": "assets/sass.png",
+  "categories": [
+    "Formatters"
+  ],
+  "activationEvents": [
+    "onLanguage:css",
+    "onLanguage:scss"
+  ],
+  "main": "./out/extension",
+  "contributes": {
+    "configuration": [
+      {
+        "type": "object",
+        "title": "SCSS Formatter Configuration",
+        "properties": {
+          "scssFormatter.useTabs": {
+            "type": "boolean",
+            "default": false,
+            "description": "Indent lines with tabs instead of spaces."
+          },
+          "scssFormatter.tabWidth": {
+            "type": "number",
+            "default": 2,
+            "description": "Specify the number of spaces per indentation-level."
+          },
+          "scssFormatter.singleQuote": {
+            "type": "boolean",
+            "default": false,
+            "description": "Use single quotes instead of double quotes."
+          }
+        }
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "release": "standard-version --message 'release: vscode-scss-formatter v%s' --no-verify"
+  },
+  "dependencies": {
+    "prettier": "^1.14.2"
+  },
+  "devDependencies": {
+    "@types/node": "^10.9.2",
+    "standard-version": "^4.4.0",
+    "tslint": "^5.11.0",
+    "typescript": "^2.9.2",
+    "vscode": "^1.1.21"
+  }
+}
