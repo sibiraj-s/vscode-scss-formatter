@@ -21,7 +21,6 @@ export class SCSSFormatter implements DocumentFormattingEditProvider {
 
     const options = {
       ...JSON.parse(JSON.stringify(workspaceConfiguration)),
-      singleQuote: true,
       parser: languageId
     };
 
