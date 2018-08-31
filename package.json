@@ -56,7 +56,6 @@
     "lint": "tslint -p ./",
     "postinstall": "node ./node_modules/vscode/bin/install",
     "precommit": "npm run test",
-    "release": "standard-version --message 'release: vscode-scss-formatter v%s' --no-verify",
     "test": "npm run lint",
     "vscode:prepublish": "npm run compile",
     "watch": "tsc -watch -p ./"
@@ -67,7 +66,6 @@
   "devDependencies": {
     "@types/node": "^10.9.2",
     "husky": "^0.14.3",
-    "standard-version": "^4.4.0",
     "tslint": "^5.11.0",
     "typescript": "^2.9.2",
     "vscode": "^1.1.21"
