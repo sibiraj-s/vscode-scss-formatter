@@ -13,9 +13,13 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+#### Dependency Updates
+
+* update `@types/node` to v10.9.4 ([1d665a4](https://github.com/Sibiraj-S/vscode-scss-formatter/commit/1d665a4))
+
 #### Internal
 
-* don't use standard-version for generating changelogs
+* don't use standard-version for generating changelogs ([768e1d6](https://github.com/Sibiraj-S/vscode-scss-formatter/commit/768e1d6))
 
 ## v1.0.2 (2018-08-26)
 
