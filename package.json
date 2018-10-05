@@ -3,17 +3,17 @@
   "displayName": "SCSS Formatter",
   "description": "A Visual Studio Code Extension to format SCSS",
   "version": "1.0.2",
-  "publisher": "Sibiraj-S",
+  "publisher": "sibiraj-s",
   "licence": "MIT",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/Sibiraj-S/vscode-scss-formatter.git"
+    "url": "https://github.com/sibiraj-s/vscode-scss-formatter.git"
   },
   "bugs": {
-    "url": "https://github.com/Sibiraj-S/vscode-scss-formatter/issues"
+    "url": "https://github.com/sibiraj-s/vscode-scss-formatter/issues"
   },
-  "homepage": "https://github.com/Sibiraj-S/vscode-scss-formatter",
+  "homepage": "https://github.com/sibiraj-s/vscode-scss-formatter",
   "engines": {
     "vscode": "^1.26.0"
   },

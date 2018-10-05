@@ -15,11 +15,11 @@ All notable changes to this project will be documented in this file.
 
 #### Dependency Updates
 
-* update `@types/node` to v10.9.4 ([1d665a4](https://github.com/Sibiraj-S/vscode-scss-formatter/commit/1d665a4))
+* update `@types/node` to v10.9.4 ([1d665a4](https://github.com/sibiraj-s/vscode-scss-formatter/commit/1d665a4))
 
 #### Internal
 
-* don't use standard-version for generating changelogs ([768e1d6](https://github.com/Sibiraj-S/vscode-scss-formatter/commit/768e1d6))
+* don't use standard-version for generating changelogs ([768e1d6](https://github.com/sibiraj-s/vscode-scss-formatter/commit/768e1d6))
 
 ## v1.0.2 (2018-08-26)
 
@@ -31,7 +31,7 @@ All notable changes to this project will be documented in this file.
 
 #### Bug Fixes
 
-* disable `singleQuote` enabled by default([db9cd59](https://github.com/Sibiraj-S/vscode-scss-formatter/commit/db9cd59))
+* disable `singleQuote` enabled by default([db9cd59](https://github.com/sibiraj-s/vscode-scss-formatter/commit/db9cd59))
 
 ## v1.0.0 (2018-08-26)
 

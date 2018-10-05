@@ -6,12 +6,12 @@ SCSS Formatter uses [Prettier](https://github.com/prettier/prettier) under the h
 
 ## Installation
 
-Refer to [Visual Studio MarketPlace](https://marketplace.visualstudio.com/items?itemName=Sibiraj-S.vscode-scss-formatter) to install or download the extension
+Refer to [Visual Studio MarketPlace](https://marketplace.visualstudio.com/items?itemName=sibiraj-s.vscode-scss-formatter) to install or download the extension
 
 To install via [command line](https://code.visualstudio.com/docs/editor/command-line), you should have installed `code` command in `PATH`
 
 ```bash
-code --install-extension Sibiraj-S.vscode-scss-formatter
+code --install-extension sibiraj-s.vscode-scss-formatter
 ```
 
 ## Usage
