@@ -55,19 +55,18 @@
     "compile": "tsc -p ./",
     "lint": "tslint -p ./",
     "postinstall": "node ./node_modules/vscode/bin/install",
-    "precommit": "npm run test",
     "test": "npm run lint",
     "vscode:prepublish": "npm run compile",
     "watch": "tsc -watch -p ./"
   },
   "dependencies": {
-    "prettier": "^1.14.2"
+    "prettier": "^1.14.3"
   },
   "devDependencies": {
-    "@types/node": "^10.9.4",
-    "husky": "^0.14.3",
+    "@types/node": "^10.11.4",
+    "husky": "^1.1.0",
     "tslint": "^5.11.0",
-    "typescript": "^2.9.2",
+    "typescript": "^3.1.1",
     "vscode": "^1.1.21"
   }
 }
