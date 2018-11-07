@@ -6,13 +6,8 @@
   "publisher": "sibiraj-s",
   "licence": "MIT",
   "private": true,
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/sibiraj-s/vscode-scss-formatter.git"
-  },
-  "bugs": {
-    "url": "https://github.com/sibiraj-s/vscode-scss-formatter/issues"
-  },
+  "repository": "https://github.com/sibiraj-s/vscode-scss-formatter.git",
+  "bugs": "https://github.com/sibiraj-s/vscode-scss-formatter/issues",
   "homepage": "https://github.com/sibiraj-s/vscode-scss-formatter",
   "engines": {
     "vscode": "^1.26.0"
