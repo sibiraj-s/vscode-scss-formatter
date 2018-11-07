@@ -11,6 +11,15 @@ All notable changes to this project will be documented in this file.
 > - Documentation
 > - Internal
 
+## v1.0.4 (2018-11-07)
+
+#### Dependency Updates
+
+* update `prettier` to v1.15.1 ([618050b](https://github.com/sibiraj-s/vscode-scss-formatter/commit/618050b))
+* update `@types/node` to v10.12.2 ([618050b](https://github.com/sibiraj-s/vscode-scss-formatter/commit/618050b))
+* update `typescript` to v3.1.6 ([618050b](https://github.com/sibiraj-s/vscode-scss-formatter/commit/618050b))
+* update `husky` to v1.1.3 ([618050b](https://github.com/sibiraj-s/vscode-scss-formatter/commit/618050b))
+
 ## v1.0.3 (2018-10-05)
 
 #### Dependency Updates
