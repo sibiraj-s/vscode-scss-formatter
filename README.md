@@ -2,7 +2,9 @@
 
 SCSS Formatter is an extension for Visual Studio Code to format [SCSS](https://sass-lang.com/).
 
-SCSS Formatter uses [Prettier](https://github.com/prettier/prettier) under the hood to format files. Though Prettier supports formatting various file types. This extension focuses only on `SCSS`. Additionally it supports `CSS`
+SCSS Formatter uses [Prettier](https://github.com/prettier/prettier) under the hood to format files. Though Prettier supports formatting various file types. This extension focuses only on `SCSS`. Additionally it supports `CSS`. 
+
+Any issues related to formatting, open an issue [here](https://github.com/prettier/prettier/issues)
 
 ## Installation
 
