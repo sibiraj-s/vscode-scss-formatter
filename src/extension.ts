@@ -13,7 +13,6 @@ const filesToFormat: DocumentSelector = [
 ];
 
 export function activate(context: ExtensionContext) {
-
   const scssFormatter = new SCSSFormatter();
 
   const disposables: Disposable[] = [
@@ -21,7 +20,6 @@ export function activate(context: ExtensionContext) {
   ];
 
   context.subscriptions.push(...disposables);
-
 }
 
 export function deactivate() {

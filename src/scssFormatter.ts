@@ -6,7 +6,6 @@ import {
 const prettier = require('prettier');
 
 export class SCSSFormatter implements DocumentFormattingEditProvider {
-
   public provideDocumentFormattingEdits(document: TextDocument): TextEdit[] {
     return this.formatDocument(document);
   }
