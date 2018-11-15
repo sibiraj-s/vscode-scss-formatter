@@ -10,6 +10,7 @@
   "bugs": "https://github.com/sibiraj-s/vscode-scss-formatter/issues",
   "homepage": "https://github.com/sibiraj-s/vscode-scss-formatter",
   "engines": {
+    "node": "^10",
     "vscode": "^1.26.0"
   },
   "icon": "assets/sass.png",
