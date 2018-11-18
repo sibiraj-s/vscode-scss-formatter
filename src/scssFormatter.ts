@@ -5,26 +5,35 @@ import {
 
 const prettier = require('prettier');
 
+import { safeExecution } from './errorHandler';
+
+async function format(document: TextDocument): Promise<string> {
+  const workspaceConfiguration: WorkspaceConfiguration = workspace.getConfiguration('scssFormatter');
+  const rawDocumentText = document.getText();
+  const { fileName, languageId } = document;
+
+  const options = {
+    ...Object.assign({}, workspaceConfiguration),
+    parser: languageId
+  };
+
+  return safeExecution(
+    () => prettier.format(rawDocumentText, options),
+    rawDocumentText,
+    fileName
+  );
+}
+
+// get range for the current document
+function fullDocumentRange(document: TextDocument): Range {
+  const rangeStart: Position = document.lineAt(0).range.start;
+  const rangeEnd: Position = document.lineAt(document.lineCount - 1).range.end;
+  return new Range(rangeStart, rangeEnd);
+}
+
 export class SCSSFormatter implements DocumentFormattingEditProvider {
-  public provideDocumentFormattingEdits(document: TextDocument): TextEdit[] {
-    return this.formatDocument(document);
-  }
-
-  private formatDocument(document: TextDocument): TextEdit[] {
-    const workspaceConfiguration: WorkspaceConfiguration = workspace.getConfiguration('scssFormatter');
-    const rangeStart: Position = document.lineAt(0).range.start;
-    const rangeEnd: Position = document.lineAt(document.lineCount - 1).range.end;
-    const range: Range = new Range(rangeStart, rangeEnd);
-    const rawDocument = document.getText(range);
-    const languageId = document.languageId;
-
-    const options = {
-      ...JSON.parse(JSON.stringify(workspaceConfiguration)),
-      parser: languageId
-    };
-
-    const formattedDocument = prettier.format(rawDocument, options);
-
-    return [TextEdit.replace(range, formattedDocument)];
+  public async provideDocumentFormattingEdits(document: TextDocument): Promise<TextEdit[]> {
+    const formattedDocument = await format(document);
+    return [TextEdit.replace(fullDocumentRange(document), formattedDocument)];
   }
 }

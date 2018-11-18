@@ -1,27 +1,46 @@
 'use strict';
 
 import {
-  Disposable, DocumentSelector, ExtensionContext,
-  languages, window
+  Disposable, ExtensionContext, languages,
+  window, workspace
 } from 'vscode';
 
+import { registerErrorHandlerDisposables, setupErrorHandler } from './errorHandler';
 import { SCSSFormatter } from './scssFormatter';
+import { EXTENSION_NAME, languageSelector } from './utils';
 
-const filesToFormat: DocumentSelector = [
-  { scheme: 'file', language: 'css' },
-  { scheme: 'file', language: 'scss' }
-];
+let formatterHandler: undefined | Disposable;
 
-export function activate(context: ExtensionContext) {
-  const scssFormatter = new SCSSFormatter();
-
-  const disposables: Disposable[] = [
-    languages.registerDocumentFormattingEditProvider(filesToFormat, scssFormatter)
-  ];
-
-  context.subscriptions.push(...disposables);
+// dispose formatter
+function disposeHandlers() {
+  if (formatterHandler) {
+    formatterHandler.dispose();
+  }
+  formatterHandler = undefined;
 }
 
+// register formatter
+function registerFormatter() {
+  disposeHandlers();
+  const scssFormatter = new SCSSFormatter();
+  formatterHandler = languages.registerDocumentFormattingEditProvider(
+    languageSelector, scssFormatter
+  );
+}
+
+// method is called when extension is activated
+export function activate(context: ExtensionContext) {
+  registerFormatter();
+
+  context.subscriptions.push(
+    workspace.onDidChangeWorkspaceFolders(registerFormatter),
+    { dispose: disposeHandlers },
+    setupErrorHandler(),
+    ...registerErrorHandlerDisposables()
+  );
+}
+
+// method is called when extension is deactivated
 export function deactivate() {
-  window.showInformationMessage('SCSS Formatter deactivated');
+  window.showInformationMessage(`${EXTENSION_NAME} deactivated`);
 }
