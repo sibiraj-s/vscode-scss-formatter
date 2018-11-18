@@ -1,14 +1,23 @@
 import { DocumentSelector } from 'vscode';
 
-export const EXTENSION_NAME = 'SCSS Formatter';
+const prettier = require('prettier');
+
+const EXTENSION_NAME = 'SCSS Formatter';
 
 /** languages supported by scss formatter */
-export const supportedLanguages: string[] = [
+const supportedLanguages: string[] = [
   'css',
   'scss'
 ];
 
 /** files to format by language */
-export const languageSelector: DocumentSelector = supportedLanguages.map(
+const languageSelector: DocumentSelector = supportedLanguages.map(
   (language) => ({ scheme: 'file', language })
 );
+
+export {
+  prettier,
+  EXTENSION_NAME,
+  supportedLanguages,
+  languageSelector
+};

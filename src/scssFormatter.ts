@@ -3,9 +3,8 @@ import {
   TextEdit, workspace, WorkspaceConfiguration
 } from 'vscode';
 
-const prettier = require('prettier');
-
 import { safeExecution } from './errorHandler';
+import { prettier } from './utils';
 
 async function format(document: TextDocument): Promise<string> {
   const workspaceConfiguration: WorkspaceConfiguration = workspace.getConfiguration('scssFormatter');

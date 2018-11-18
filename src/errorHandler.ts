@@ -3,7 +3,7 @@ import {
   StatusBarAlignment, StatusBarItem, TextEditor, window
 } from 'vscode';
 
-import { EXTENSION_NAME, supportedLanguages } from './utils';
+import { EXTENSION_NAME, prettier, supportedLanguages } from './utils';
 
 let statusBarItem: StatusBarItem;
 let outputChannel: OutputChannel;
@@ -86,7 +86,7 @@ export function setupErrorHandler(): Disposable {
   // Setup the statusBarItem
   statusBarItem = window.createStatusBarItem(StatusBarAlignment.Right, -1);
   statusBarItem.text = EXTENSION_NAME;
-  statusBarItem.tooltip = `${EXTENSION_NAME} v1.11`;
+  statusBarItem.tooltip = `${EXTENSION_NAME}: Prettier - v${prettier.version}`;
   statusBarItem.command = 'scss-formatter.open-output';
 
   toggleStatusBarItem(window.activeTextEditor);
