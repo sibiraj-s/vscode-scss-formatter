@@ -11,6 +11,19 @@ All notable changes to this project will be documented in this file.
 > - Documentation
 > - Internal
 
+## v1.1.0 (2018-11-18)
+
+#### Features
+
+* add format errors to vscode console ([c110235](https://github.com/sibiraj-s/vscode-scss-formatter/commit/c110235))
+* update vscode statusbar with format status ([c110235](https://github.com/sibiraj-s/vscode-scss-formatter/commit/c110235))
+
+#### Dependency Updates
+
+* update `prettier` to v1.15.2 ([f3a3a70](https://github.com/sibiraj-s/vscode-scss-formatter/commit/f3a3a70))
+* update `@types/node` to v10.12.9 ([f3a3a70](https://github.com/sibiraj-s/vscode-scss-formatter/commit/f3a3a70))
+* update `husky` to v1.1.4 ([f3a3a70](https://github.com/sibiraj-s/vscode-scss-formatter/commit/f3a3a70))
+
 ## v1.0.4 (2018-11-07)
 
 #### Dependency Updates
