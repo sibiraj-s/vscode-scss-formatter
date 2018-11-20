@@ -11,6 +11,12 @@ All notable changes to this project will be documented in this file.
 > - Documentation
 > - Internal
 
+## v1.1.1 (2018-11-20)
+
+#### Performance Improvements
+
+* set minimum vscode requirement to v1.29.0 ([a4195b7](https://github.com/sibiraj-s/vscode-scss-formatter/commit/a4195b7))
+
 ## v1.1.0 (2018-11-18)
 
 #### Features
