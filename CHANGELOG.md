@@ -6,10 +6,17 @@ All notable changes to this project will be documented in this file.
 > - Features
 > - Bug Fixes
 > - Performance Improvements
+> - Enhancements
 > - Dependency Updates
 > - Breaking Changes
 > - Documentation
 > - Internal
+
+## v1.2.2 (2018-11-21)
+
+#### Enhancements
+
+* use proper menu category for commands ([de74a9c](https://github.com/sibiraj-s/vscode-scss-formatter/commit/de74a9c))
 
 ## v1.2.1 (2018-11-21)
 
