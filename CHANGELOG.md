@@ -11,6 +11,17 @@ All notable changes to this project will be documented in this file.
 > - Documentation
 > - Internal
 
+## v1.1.2 (2018-11-21)
+
+#### Performance Improvements
+
+* activate extension on startup ([b070fa3](https://github.com/sibiraj-s/vscode-scss-formatter/commit/b070fa3))
+* remove unwanted files from extension bundle ([141e5aa](https://github.com/sibiraj-s/vscode-scss-formatter/commit/141e5aa))
+
+#### Internal
+
+* add extension tests ([b070fa3](https://github.com/sibiraj-s/vscode-scss-formatter/commit/b070fa3))
+
 ## v1.1.1 (2018-11-20)
 
 #### Performance Improvements
