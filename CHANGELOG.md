@@ -11,6 +11,12 @@ All notable changes to this project will be documented in this file.
 > - Documentation
 > - Internal
 
+## v1.2.1 (2018-11-21)
+
+#### Performance Improvements
+
+* remove redundant code in deactivate method ([7f59324](https://github.com/sibiraj-s/vscode-scss-formatter/commit/7f59324))
+
 ## v1.2.0 (2018-11-21)
 
 #### Features
