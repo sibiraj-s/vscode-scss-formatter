@@ -46,5 +46,4 @@ export function activate(context: ExtensionContext) {
 }
 
 // method is called when extension is deactivated
-/* tslint:disable:no-empty */
-export function deactivate() { }
+export function deactivate() { } // tslint:disable-line:no-empty
