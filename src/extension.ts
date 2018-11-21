@@ -7,7 +7,7 @@ import {
 
 import { registerErrorHandlerDisposables, setupErrorHandler } from './errorHandler';
 import { SCSSFormatter } from './scssFormatter';
-import { EXTENSION_NAME, languageSelector } from './utils';
+import { languageSelector } from './utils';
 
 let formatterHandler: undefined | Disposable;
 
@@ -46,6 +46,5 @@ export function activate(context: ExtensionContext) {
 }
 
 // method is called when extension is deactivated
-export function deactivate() {
-  window.showInformationMessage(`${EXTENSION_NAME} deactivated`);
-}
+/* tslint:disable:no-empty */
+export function deactivate() { }
