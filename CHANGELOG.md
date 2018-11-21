@@ -11,6 +11,20 @@ All notable changes to this project will be documented in this file.
 > - Documentation
 > - Internal
 
+## v1.2.0 (2018-11-21)
+
+#### Features
+
+* new command `SCSS Formatter: Activate` to activate the extension ([754d2fd](https://github.com/sibiraj-s/vscode-scss-formatter/commit/754d2fd))
+
+#### Performance Improvements
+
+* revert: don't activate extension on startup ([754d2fd](https://github.com/sibiraj-s/vscode-scss-formatter/commit/754d2fd))
+
+#### Dependency Updates
+
+* update `husky` to v1.2.0 ([e4e17d8](https://github.com/sibiraj-s/vscode-scss-formatter/commit/e4e17d8))
+
 ## v1.1.2 (2018-11-21)
 
 #### Performance Improvements
