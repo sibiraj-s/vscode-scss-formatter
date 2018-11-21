@@ -8,6 +8,7 @@
     "**/CVS": true,
     "**/.DS_Store": true,
     "**/node_modules": true,
+    ".vscode-test": true,
     "out": true
   },
   "files.insertFinalNewline": true,
