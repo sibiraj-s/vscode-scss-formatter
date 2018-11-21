@@ -1,0 +1,40 @@
+:root {
+  font-size: 12px;
+  font-family: monospace;
+  --color: #FF555B;
+  --bg: #FDFDF2;
+}
+
+* { margin: 0;
+  padding: 0;
+  box-sizing: border-box; user-select: none; -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  overflow: hidden;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  color: var(--color); background-color: var(--bg);
+}
+
+a {
+  color: inherit;
+} svg {
+  display: block;
+  fill: currentColor;
+} .credits {
+  position: fixed;
+  bottom: 1rem; right: 1rem;
+  font-size: 0.75rem;
+}
+
+.credits > span {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.hide { opacity: 0; }
