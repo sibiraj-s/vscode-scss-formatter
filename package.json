@@ -18,10 +18,18 @@
     "Formatters"
   ],
   "activationEvents": [
-    "*"
+    "onCommand:scss-formatter.activate",
+    "onLanguage:css",
+    "onLanguage:scss"
   ],
   "main": "./out/extension",
   "contributes": {
+    "commands": [
+      {
+        "command": "scss-formatter.activate",
+        "title": "SCSS Formattrer: Activate"
+      }
+    ],
     "configuration": [
       {
         "type": "object",

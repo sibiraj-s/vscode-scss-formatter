@@ -1,8 +1,8 @@
 'use strict';
 
 import {
-  Disposable, ExtensionContext, languages,
-  window, workspace
+  commands, Disposable, ExtensionContext,
+  languages, window, workspace
 } from 'vscode';
 
 import { registerErrorHandlerDisposables, setupErrorHandler } from './errorHandler';
@@ -32,10 +32,15 @@ function registerFormatter() {
 export function activate(context: ExtensionContext) {
   registerFormatter();
 
+  const disposable = commands.registerCommand('scss-formatter.activate', () => {
+    window.showInformationMessage('SCSS Formatter Activated');
+  });
+
   context.subscriptions.push(
     workspace.onDidChangeWorkspaceFolders(registerFormatter),
     { dispose: disposeHandlers },
     setupErrorHandler(),
+    disposable,
     ...registerErrorHandlerDisposables()
   );
 }

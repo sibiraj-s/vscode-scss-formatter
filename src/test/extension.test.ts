@@ -5,6 +5,11 @@ import { commands, Uri, window, workspace } from 'vscode';
 
 const prettier = require('prettier');
 
+// activate the formatter
+async function activateFormatter() {
+  await commands.executeCommand('scss-formatter.activate');
+}
+
 /**
  * loads and format a file.
  * @param file path relative to base URI (a workspaceFolder's URI)
@@ -49,6 +54,7 @@ async function formatSameAsPrettier(file: string) {
 }
 
 suite('SCSS Formatter Extension Tests', () => {
+  test('it should activate the extension', () => activateFormatter());
   test('it should fromat CSS', () => formatSameAsPrettier('fixtures/ugly.css'));
   test('it should format SCSS', () => formatSameAsPrettier('fixtures/ugly.scss'));
 });
