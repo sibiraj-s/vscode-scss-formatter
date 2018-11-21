@@ -27,7 +27,8 @@
     "commands": [
       {
         "command": "scss-formatter.activate",
-        "title": "SCSS Formattrer: Activate"
+        "title": "Activate",
+        "category": "SCSS Formattrer"
       }
     ],
     "configuration": [
