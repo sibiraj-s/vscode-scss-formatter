@@ -64,7 +64,7 @@ function updateStatusBarItem(message: string): void {
  *
  * @returns {string} string with either formatted/raw document
  */
-export function safeExecution(cb: (() => string), rawDocumentText: string, fileName: string) {
+export function safeExecution(cb: (() => string), rawDocumentText: string, fileName: string): string {
   try {
     const returnValue = cb();
     updateStatusBarItem(`${EXTENSION_NAME}: $(check)`);
