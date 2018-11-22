@@ -12,6 +12,16 @@ All notable changes to this project will be documented in this file.
 > - Documentation
 > - Internal
 
+## v1.2.3 (2018-11-22)
+
+#### Enhancements
+
+* show extension version instead of prettier version ([ca4f516](https://github.com/sibiraj-s/vscode-scss-formatter/commit/ca4f516))
+
+#### Dependency Updates
+
+* update `@types/node` to v10.12.10 ([ea49c29](https://github.com/sibiraj-s/vscode-scss-formatter/commit/ea49c29))
+
 ## v1.2.2 (2018-11-21)
 
 #### Enhancements
