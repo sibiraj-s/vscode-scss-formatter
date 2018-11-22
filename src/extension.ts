@@ -6,7 +6,7 @@ import {
 } from 'vscode';
 
 import { registerErrorHandlerDisposables, setupErrorHandler } from './errorHandler';
-import { SCSSFormatter } from './scssFormatter';
+import { SCSSFormatter } from './ScssFormatProvider';
 import { languageSelector } from './utils';
 
 let formatterHandler: undefined | Disposable;
