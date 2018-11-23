@@ -7,7 +7,7 @@ import { SCSSFormatter } from './scssFormatterProvider';
 import { languageSelector } from './utils';
 
 const ACTIVATION_COMMAND: Disposable = commands.registerCommand('scss-formatter.activate', () => {
-  window.showInformationMessage('SCSS Formatter Activated');
+  window.showInformationMessage('SCSS Formatter is Active');
 });
 
 // method is called when extension is activated
