@@ -12,6 +12,22 @@ All notable changes to this project will be documented in this file.
 > - Documentation
 > - Internal
 
+## v1.3.0 (2018-11-23)
+
+#### Features
+
+- add commands to show/clear formatter output logs ([a347d1c](https://github.com/sibiraj-s/vscode-scss-formatter/commit/a347d1c))
+- add message to output console on format success ([7420978](https://github.com/sibiraj-s/vscode-scss-formatter/commit/7420978))
+
+#### Enhancements
+
+- clear statusbarItem if active editor's file scheme doesn't match supported file types ([459c1d2](https://github.com/sibiraj-s/vscode-scss-formatter/commit/459c1d2))
+- remove package-lock.json from extension bundle ([3be1f3d](https://github.com/sibiraj-s/vscode-scss-formatter/commit/3be1f3d))
+
+#### Performance Improvements
+
+- handle extension registration efficiently ([9a6fd40](https://github.com/sibiraj-s/vscode-scss-formatter/commit/9a6fd40))
+
 ## v1.2.3 (2018-11-22)
 
 #### Enhancements
