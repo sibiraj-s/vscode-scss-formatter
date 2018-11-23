@@ -27,11 +27,6 @@ function toggleStatusBarItem(editor: TextEditor | undefined): void {
   }
 }
 
-// hide statusbaritem
-function hideStatusBarItem(): void {
-  statusBarItem.hide();
-}
-
 // add filepath to the output message
 function addFilePathToMesssage(message: string, fileName: string): string {
   const lines = message.split('\n');
@@ -115,7 +110,7 @@ export function registerErrorHandlerDisposables(): Disposable[] {
     }),
     window.onDidChangeActiveTextEditor((editor: TextEditor | undefined) => {
       if (editor === undefined) {
-        hideStatusBarItem();
+        statusBarItem.hide();
       }
     })
   ];
