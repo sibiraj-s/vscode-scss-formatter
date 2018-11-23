@@ -72,6 +72,7 @@ function updateStatusBarItem(message: string): void {
 export function safeExecution(cb: (() => string), rawDocumentText: string, fileName: string): string {
   try {
     const returnValue = cb();
+    addToOutput(`${fileName} : Formatted Successfully`);
     updateStatusBarItem(`${EXTENSION_NAME}: $(check)`);
     return returnValue;
   } catch (err) {
