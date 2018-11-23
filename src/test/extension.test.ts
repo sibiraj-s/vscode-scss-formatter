@@ -10,6 +10,15 @@ async function activateFormatter() {
   await commands.executeCommand('scss-formatter.activate');
 }
 
+async function showOutputConsole() {
+  await commands.executeCommand('scss-formatter.open-output');
+}
+
+// clear console output from formatter
+async function clearOutput() {
+  await commands.executeCommand('scss-formatter.clear-output');
+}
+
 /**
  * loads and format a file.
  * @param file path relative to base URI (a workspaceFolder's URI)
@@ -55,6 +64,8 @@ async function formatSameAsPrettier(file: string) {
 
 suite('SCSS Formatter Extension Tests', () => {
   test('it should activate the extension', () => activateFormatter());
+  test('it should show the output console', () => showOutputConsole());
   test('it should fromat CSS', () => formatSameAsPrettier('fixtures/ugly.css'));
   test('it should format SCSS', () => formatSameAsPrettier('fixtures/ugly.scss'));
+  test('it should clear the logs from output console', () => clearOutput());
 });

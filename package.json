@@ -19,6 +19,8 @@
   ],
   "activationEvents": [
     "onCommand:scss-formatter.activate",
+    "onCommand:scss-formatter.show-output",
+    "onCommand:scss-formatter.clear-output",
     "onLanguage:css",
     "onLanguage:scss"
   ],
@@ -28,6 +30,16 @@
       {
         "command": "scss-formatter.activate",
         "title": "Activate",
+        "category": "SCSS Formattrer"
+      },
+      {
+        "command": "scss-formatter.show-output",
+        "title": "Show Output",
+        "category": "SCSS Formattrer"
+      },
+      {
+        "command": "scss-formatter.clear-output",
+        "title": "Clear Output",
         "category": "SCSS Formattrer"
       }
     ],

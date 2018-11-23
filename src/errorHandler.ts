@@ -83,7 +83,7 @@ export function safeExecution(cb: (() => string), rawDocumentText: string, fileN
  *
  * @returns {Disposable} The command to open the output channel
  */
-export function setupErrorHandler(): Disposable {
+export function setupErrorHandler(): Disposable[] {
   // Setup the statusBarItem
   statusBarItem = window.createStatusBarItem(StatusBarAlignment.Right, -1);
   statusBarItem.text = EXTENSION_NAME;
@@ -95,9 +95,18 @@ export function setupErrorHandler(): Disposable {
   // Setup the outputChannel
   outputChannel = window.createOutputChannel(EXTENSION_NAME);
 
-  return commands.registerCommand('scss-formatter.open-output', () => {
-    outputChannel.show();
-  });
+  return [
+    commands.registerCommand('scss-formatter.open-output', () => {
+      outputChannel.show();
+    }),
+    commands.registerCommand('scss-formatter.show-output', () => {
+      outputChannel.show();
+    }),
+    commands.registerCommand('scss-formatter.clear-output', () => {
+      statusBarItem.text = EXTENSION_NAME;
+      outputChannel.clear();
+    })
+  ];
 }
 
 export function registerErrorHandlerDisposables(): Disposable[] {
