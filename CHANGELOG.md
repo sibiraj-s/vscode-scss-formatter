@@ -12,6 +12,12 @@ All notable changes to this project will be documented in this file.
 > - Documentation
 > - Internal
 
+## v1.3.1 (2018-11-23)
+
+#### Internal
+
+- update homepage link in package.json ([7420978](https://github.com/sibiraj-s/vscode-scss-formatter/commit/7420978))
+
 ## v1.3.0 (2018-11-23)
 
 #### Features
