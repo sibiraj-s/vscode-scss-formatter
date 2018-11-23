@@ -19,3 +19,6 @@ export function activate(context: ExtensionContext) {
   context.subscriptions.push(...setupErrorHandler());
   context.subscriptions.push(...registerErrorHandlerDisposables());
 }
+
+// method is called when extension is deactivated
+export function deactivate() { } // tslint:disable-line:no-empty
