@@ -1,3 +1,4 @@
+import { BuiltInParserName } from 'prettier';
 import { DocumentSelector, extensions } from 'vscode';
 
 /**
@@ -12,7 +13,7 @@ function getExtensionVersion(): string | null {
 }
 
 /** languages supported by scss formatter */
-const supportedLanguages: string[] = [
+const supportedLanguages: BuiltInParserName[] = [
   'css',
   'scss'
 ];

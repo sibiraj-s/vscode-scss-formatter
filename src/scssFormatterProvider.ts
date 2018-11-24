@@ -1,24 +1,27 @@
 import {
+  BuiltInParserName,
+  format,
+  Options as PrettierOptions
+} from 'prettier';
+import {
   DocumentFormattingEditProvider, Position, Range, TextDocument,
   TextEdit, workspace, WorkspaceConfiguration
 } from 'vscode';
 
-const prettier = require('prettier');
-
 import { safeExecution } from './errorHandler';
 
-async function format(document: TextDocument): Promise<string> {
+async function formatDocument(document: TextDocument): Promise<string> {
   const workspaceConfiguration: WorkspaceConfiguration = workspace.getConfiguration('scssFormatter');
   const rawDocumentText = document.getText();
   const { fileName, languageId } = document;
 
-  const options = {
+  const options: PrettierOptions = {
     ...Object.assign({}, workspaceConfiguration),
-    parser: languageId
+    parser: languageId as BuiltInParserName
   };
 
   return safeExecution(
-    () => prettier.format(rawDocumentText, options),
+    () => format(rawDocumentText, options),
     rawDocumentText,
     fileName
   );
@@ -33,7 +36,7 @@ function fullDocumentRange(document: TextDocument): Range {
 
 export class SCSSFormatter implements DocumentFormattingEditProvider {
   public async provideDocumentFormattingEdits(document: TextDocument): Promise<TextEdit[]> {
-    const formattedDocument = await format(document);
+    const formattedDocument = await formatDocument(document);
     return [TextEdit.replace(fullDocumentRange(document), formattedDocument)];
   }
 }

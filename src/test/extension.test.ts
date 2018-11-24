@@ -1,9 +1,8 @@
 /* tslint:disable: no-console */
 import * as assert from 'assert';
 import * as path from 'path';
+import { format } from 'prettier';
 import { commands, Uri, window, workspace } from 'vscode';
-
-const prettier = require('prettier');
 
 // activate the formatter
 async function activateFormatter() {
@@ -25,7 +24,7 @@ async function clearOutput() {
  * @param base base URI
  * @returns source code and resulting code
  */
-async function format(
+async function formatWithVscode(
   file: string,
   base: Uri = workspace.workspaceFolders![0].uri
 ): Promise<{
@@ -53,9 +52,9 @@ async function format(
  * @param file path relative to workspace root
  */
 async function formatSameAsPrettier(file: string) {
-  const result = await format(file);
+  const result = await formatWithVscode(file);
   if (result) {
-    const prettierFormatted = prettier.format(result.source, {
+    const prettierFormatted = format(result.source, {
       filepath: file,
     });
     assert.equal(result.result, prettierFormatted);
