@@ -12,6 +12,12 @@ All notable changes to this project will be documented in this file.
 > - Documentation
 > - Internal
 
+## v1.3.2 (2018-11-24)
+
+#### Internal
+
+- use type definitions for prettier ([25b9b35](https://github.com/sibiraj-s/vscode-scss-formatter/commit/25b9b35))
+
 ## v1.3.1 (2018-11-23)
 
 #### Internal
