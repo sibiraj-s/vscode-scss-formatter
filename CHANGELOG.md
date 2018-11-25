@@ -12,6 +12,12 @@ All notable changes to this project will be documented in this file.
 > - Documentation
 > - Internal
 
+## v1.3.3 (2018-11-25)
+
+#### Internal
+
+- move @types/prettier to devDependencies ([59e489e](https://github.com/sibiraj-s/vscode-scss-formatter/commit/59e489e))
+
 ## v1.3.2 (2018-11-24)
 
 #### Internal
