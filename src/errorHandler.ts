@@ -18,12 +18,18 @@ function checkForInConsoleTabSwitch(editor: TextEditor): boolean {
 
 // toggle statusBarItem when document changes
 function toggleStatusBarItem(editor: TextEditor | undefined): void {
+  if (!statusBarItem) {
+    return;
+  }
+
   if (editor !== undefined) {
     if (checkForInConsoleTabSwitch(editor)) { return; }
 
     // hide statusBarItem if document changes and doesn't match supported languages
     const score = languages.match(supportedLanguages, editor.document);
     score ? statusBarItem.show() : statusBarItem.hide();
+  } else {
+    statusBarItem.hide();
   }
 }
 
@@ -113,14 +119,7 @@ export function registerErrorHandlerDisposables(): Disposable[] {
   return [
     // Keep track whether to show/hide the statusbar
     window.onDidChangeActiveTextEditor((editor: TextEditor | undefined) => {
-      if (statusBarItem !== undefined) {
-        toggleStatusBarItem(editor);
-      }
-    }),
-    window.onDidChangeActiveTextEditor((editor: TextEditor | undefined) => {
-      if (editor === undefined) {
-        statusBarItem.hide();
-      }
+      toggleStatusBarItem(editor);
     })
   ];
 }
