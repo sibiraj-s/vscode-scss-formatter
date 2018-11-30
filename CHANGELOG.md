@@ -12,6 +12,19 @@ All notable changes to this project will be documented in this file.
 > - Documentation
 > - Internal
 
+## v1.3.4 (2018-11-30)
+
+#### Performance Improvements
+
+- remove multiple event handlers ([0c22a10](https://github.com/sibiraj-s/vscode-scss-formatter/commit/0c22a10))
+- update `prettier` to v1.15.3 ([d8bf27e](https://github.com/sibiraj-s/vscode-scss-formatter/commit/d8bf27e))
+
+#### Dependency Updates
+
+- update `typescript` to v3.2.1 ([dcc6d59](https://github.com/sibiraj-s/vscode-scss-formatter/commit/dcc6d59))
+- update `@types/prettier` to v1.15.2 ([d8bf27e](https://github.com/sibiraj-s/vscode-scss-formatter/commit/d8bf27e))
+- package-lock.json maintenance update ([def591e](https://github.com/sibiraj-s/vscode-scss-formatter/commit/def591e))
+
 ## v1.3.3 (2018-11-25)
 
 #### Internal
