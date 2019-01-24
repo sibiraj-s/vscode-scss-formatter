@@ -12,6 +12,20 @@ All notable changes to this project will be documented in this file.
 > - Documentation
 > - Internal
 
+## v1.4.0 (2019-01-24)
+
+#### Features
+
+- add an option to specify `printWidth`, defaults to `120` ([2dbc172](https://github.com/sibiraj-s/vscode-scss-formatter/commit/2dbc172))
+
+#### Internal
+
+- update `@types/node` to v10.12.18 ([ee7bc09](https://github.com/sibiraj-s/vscode-scss-formatter/commit/ee7bc09))
+- update `husky` to v1.3.1 ([ee7bc09](https://github.com/sibiraj-s/vscode-scss-formatter/commit/ee7bc09))
+- update `tslint` to v5.12.1 ([ee7bc09](https://github.com/sibiraj-s/vscode-scss-formatter/commit/ee7bc09))
+- update `typescript` to v3.2.4 ([ee7bc09](https://github.com/sibiraj-s/vscode-scss-formatter/commit/ee7bc09))
+- update `vscode` to v1.1.28 ([ee7bc09](https://github.com/sibiraj-s/vscode-scss-formatter/commit/ee7bc09))
+
 ## v1.3.4 (2018-11-30)
 
 #### Performance Improvements
