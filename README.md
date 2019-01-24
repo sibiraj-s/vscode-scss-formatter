@@ -38,7 +38,7 @@ This extension contributes the following settings:
 
 * `scssFormatter.printWidth`: Line length that the formatter will wrap on.
 * `scssFormatter.useTabs`: Indent lines with tabs instead of spaces.
-* `scssFormatter.tabWidth`: Specify the number of spaces per indentation-level.
+* `scssFormatter.tabWidth`: Number of spaces per indentation-level.
 * `scssFormatter.singleQuote`: Use single quotes instead of double quotes.
 
 **Note:** Though prettier supports various options, only few were added to provide consistency. The `formatOnPaste` is not supported and won't be supported as it may lead to unexpected code formatting.
