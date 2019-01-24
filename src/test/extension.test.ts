@@ -56,6 +56,7 @@ async function formatSameAsPrettier(file: string) {
   if (result) {
     const prettierFormatted = format(result.source, {
       filepath: file,
+      printWidth: 120
     });
     assert.equal(result.result, prettierFormatted);
   }

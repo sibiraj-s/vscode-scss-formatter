@@ -48,6 +48,11 @@
         "type": "object",
         "title": "SCSS Formatter Configuration",
         "properties": {
+          "scssFormatter.printWidth": {
+            "type": "number",
+            "default": 120,
+            "description": "Specify the line length that the formatter will wrap on"
+          },
           "scssFormatter.useTabs": {
             "type": "boolean",
             "default": false,
