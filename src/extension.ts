@@ -1,5 +1,3 @@
-'use strict';
-
 import { commands, Disposable, ExtensionContext, languages, window } from 'vscode';
 
 import { registerErrorHandlerDisposables, setupErrorHandler } from './errorHandler';
