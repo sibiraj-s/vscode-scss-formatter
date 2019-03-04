@@ -3,7 +3,7 @@
 import { commands, Disposable, ExtensionContext, languages, window } from 'vscode';
 
 import { registerErrorHandlerDisposables, setupErrorHandler } from './errorHandler';
-import { SCSSFormatter } from './scssFormatterProvider';
+import { SCSSFormatter } from './FormatterProvider';
 import { languageSelector } from './utils';
 
 const ACTIVATION_COMMAND: Disposable = commands.registerCommand('scss-formatter.activate', () => {
