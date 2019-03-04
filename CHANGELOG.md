@@ -12,6 +12,22 @@ All notable changes to this project will be documented in this file.
 > - Documentation
 > - Internal
 
+## v1.4.1 (2019-03-04)
+
+#### Dependency Updates
+
+- update `@types/node` to v10.12.29 ([02c294b](https://github.com/sibiraj-s/vscode-scss-formatter/commit/02c294b))
+- update `@types/mocha` to v5.2.6 ([02c294b](https://github.com/sibiraj-s/vscode-scss-formatter/commit/02c294b))
+- update `vscode` to v1.1.30 ([02c294b](https://github.com/sibiraj-s/vscode-scss-formatter/commit/02c294b))
+- update `@types/prettier` to v1.16.1 ([02c294b](https://github.com/sibiraj-s/vscode-scss-formatter/commit/02c294b))
+- update `prettier` to v1.16.4 ([02c294b](https://github.com/sibiraj-s/vscode-scss-formatter/commit/02c294b))
+
+#### Internal
+
+- file rename scssFormatterProvider to FormatterProvider ([eb5f15d](https://github.com/sibiraj-s/vscode-scss-formatter/commit/eb5f15d))
+- remove unncessary use strict statement ([00c1eb7](https://github.com/sibiraj-s/vscode-scss-formatter/commit/00c1eb7))
+- fix warnings in package.json ([02c294b](https://github.com/sibiraj-s/vscode-scss-formatter/commit/02c294b))
+
 ## v1.4.0 (2019-01-24)
 
 #### Features
