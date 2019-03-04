@@ -49,7 +49,7 @@
     "configuration": [
       {
         "type": "object",
-        "title": "SCSS Formatter Configuration",
+        "title": "SCSS Formatter",
         "properties": {
           "scssFormatter.printWidth": {
             "type": "number",
