@@ -12,6 +12,19 @@ All notable changes to this project will be documented in this file.
 > - Documentation
 > - Internal
 
+## v1.4.2 (2019-08-15)
+
+#### Dependency Updates
+
+- update `prettier` to v1.18.2 ([82ffd3d](https://github.com/sibiraj-s/vscode-scss-formatter/commit/82ffd3d))
+- update `@types/mocha` to v5.2.7 ([82ffd3d](https://github.com/sibiraj-s/vscode-scss-formatter/commit/82ffd3d))
+- update `@types/prettier` to v1.18.2 ([82ffd3d](https://github.com/sibiraj-s/vscode-scss-formatter/commit/82ffd3d))
+- update `husky` to v3.0.3 ([82ffd3d](https://github.com/sibiraj-s/vscode-scss-formatter/commit/82ffd3d))
+- update `tslint` to v5.18.0 ([82ffd3d](https://github.com/sibiraj-s/vscode-scss-formatter/commit/82ffd3d))
+- update `typescript` to v3.5.3 ([82ffd3d](https://github.com/sibiraj-s/vscode-scss-formatter/commit/82ffd3d))
+- update `@types/node` to v10.14.15 ([ffcf4e1](https://github.com/sibiraj-s/vscode-scss-formatter/commit/ffcf4e1))
+- update vscode test runner ([1b6e6a6](https://github.com/sibiraj-s/vscode-scss-formatter/commit/1b6e6a6))
+
 ## v1.4.1 (2019-03-04)
 
 #### Dependency Updates
