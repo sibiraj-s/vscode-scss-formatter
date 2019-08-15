@@ -68,7 +68,7 @@ async function formatSameAsPrettier(file: string) {
 suite('SCSS Formatter Extension Tests', () => {
   test('it should activate the extension', () => activateFormatter());
   test('it should show the output console', () => showOutputConsole());
-  test('it should fromat CSS', () => formatSameAsPrettier('fixtures/ugly.css'));
-  test('it should format SCSS', () => formatSameAsPrettier('fixtures/ugly.scss'));
+  test('it should fromat CSS', () => formatSameAsPrettier('./fixtures/ugly.css'));
+  test('it should format SCSS', () => formatSameAsPrettier('./fixtures/ugly.scss'));
   test('it should clear the logs from output console', () => clearOutput());
 });

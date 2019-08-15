@@ -7,6 +7,11 @@
     "no-unused-expression": true,
     "no-duplicate-variable": true,
     "no-var-requires": false,
+    "no-console": [
+      true,
+      "log",
+      "warn"
+    ],
     "curly": true,
     "class-name": true,
     "semicolon": [
