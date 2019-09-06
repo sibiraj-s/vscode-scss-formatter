@@ -1,4 +1,9 @@
-# VS Code SCSS Formatter [![Build Status](https://travis-ci.com/sibiraj-s/vscode-scss-formatter.svg?branch=master)](https://travis-ci.com/sibiraj-s/vscode-scss-formatter)
+# VS Code SCSS Formatter
+[![Build Status](https://travis-ci.com/sibiraj-s/vscode-scss-formatter.svg?branch=master)](https://travis-ci.com/sibiraj-s/vscode-scss-formatter)
+[![Version](https://badgen.net/vs-marketplace/v/sibiraj-s.vscode-scss-formatter)](https://marketplace.visualstudio.com/items?itemName=sibiraj-s.vscode-scss-formatter)
+[![Installs](https://badgen.net/vs-marketplace/i/sibiraj-s.vscode-scss-formatter)](https://marketplace.visualstudio.com/items?itemName=sibiraj-s.vscode-scss-formatter)
+[![Downloads](https://badgen.net/vs-marketplace/d/sibiraj-s.vscode-scss-formatter)](https://marketplace.visualstudio.com/items?itemName=sibiraj-s.vscode-scss-formatter)
+[![Ratings](https://badgen.net/vs-marketplace/rating/sibiraj-s.vscode-scss-formatter)](https://marketplace.visualstudio.com/items?itemName=sibiraj-s.vscode-scss-formatter&ssr=false#review-details)
 
 SCSS Formatter is an extension for Visual Studio Code to format [SCSS](https://sass-lang.com/).
 
