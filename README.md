@@ -1,5 +1,6 @@
 # VS Code SCSS Formatter
-[![Build Status](https://travis-ci.com/sibiraj-s/vscode-scss-formatter.svg?branch=master)](https://travis-ci.com/sibiraj-s/vscode-scss-formatter)
+
+[![Tests](https://github.com/sibiraj-s/vscode-scss-formatter/workflows/Tests/badge.svg)](https://github.com/sibiraj-s/vscode-scss-formatter/actions)
 [![Version](https://badgen.net/vs-marketplace/v/sibiraj-s.vscode-scss-formatter)](https://marketplace.visualstudio.com/items?itemName=sibiraj-s.vscode-scss-formatter)
 [![Installs](https://badgen.net/vs-marketplace/i/sibiraj-s.vscode-scss-formatter)](https://marketplace.visualstudio.com/items?itemName=sibiraj-s.vscode-scss-formatter)
 [![Downloads](https://badgen.net/vs-marketplace/d/sibiraj-s.vscode-scss-formatter)](https://marketplace.visualstudio.com/items?itemName=sibiraj-s.vscode-scss-formatter)
@@ -29,9 +30,9 @@ Files can be formatted by the **Format Document** option available in the **cont
 
 Default keyboard shortcuts for **Format Document** command:
 
-* MacOS: **⇧⌥F** or **Shift+Option+F**
-* Linux: **Ctrl+Shift+I**
-* Windows: **Shift+Alt+F**
+- MacOS: **⇧⌥F** or **Shift+Option+F**
+- Linux: **Ctrl+Shift+I**
+- Windows: **Shift+Alt+F**
 
 ### Formatter Demo
 
@@ -41,9 +42,9 @@ Default keyboard shortcuts for **Format Document** command:
 
 This extension contributes the following settings:
 
-* `scssFormatter.printWidth`: Line length that the formatter will wrap on.
-* `scssFormatter.useTabs`: Indent lines with tabs instead of spaces.
-* `scssFormatter.tabWidth`: Number of spaces per indentation-level.
-* `scssFormatter.singleQuote`: Use single quotes instead of double quotes.
+- `scssFormatter.printWidth`: Line length that the formatter will wrap on.
+- `scssFormatter.useTabs`: Indent lines with tabs instead of spaces.
+- `scssFormatter.tabWidth`: Number of spaces per indentation-level.
+- `scssFormatter.singleQuote`: Use single quotes instead of double quotes.
 
 **Note:** Though prettier supports various options, only few were added to provide consistency. The `formatOnPaste` is not supported and won't be supported as it may lead to unexpected code formatting.
