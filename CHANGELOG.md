@@ -3,6 +3,7 @@
 All notable changes to this project will be documented in this file.
 
 > **Tags**
+>
 > - Features
 > - Bug Fixes
 > - Performance Improvements
@@ -11,6 +12,19 @@ All notable changes to this project will be documented in this file.
 > - Breaking Changes
 > - Documentation
 > - Internal
+
+## v1.4.3 (2019-12-24)
+
+#### Dependency Updates
+
+- update `prettier` to v1.19.1 ([62d881b](https://github.com/sibiraj-s/vscode-scss-formatter/commit/62d881b))
+- bump devDependencies version to latest ([62d881b](https://github.com/sibiraj-s/vscode-scss-formatter/commit/62d881b))
+
+#### Internal
+
+- migrate to github actions from travis-ci ([8ad81a8](https://github.com/sibiraj-s/vscode-scss-formatter/commit/8ad81a8))
+- update node version requirement ([0d7f3fc](https://github.com/sibiraj-s/vscode-scss-formatter/commit/0d7f3fc))
+- set `defaultBuildTask` as `preLaunchTask` in vscode launch config ([5e86c93](https://github.com/sibiraj-s/vscode-scss-formatter/commit/5e86c93))
 
 ## v1.4.2 (2019-08-15)
 
