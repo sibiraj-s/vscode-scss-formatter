@@ -1,6 +1,5 @@
 # VS Code SCSS Formatter
 
-[![Tests](https://github.com/sibiraj-s/vscode-scss-formatter/workflows/Tests/badge.svg)](https://github.com/sibiraj-s/vscode-scss-formatter/actions)
 [![Version](https://badgen.net/vs-marketplace/v/sibiraj-s.vscode-scss-formatter)](https://marketplace.visualstudio.com/items?itemName=sibiraj-s.vscode-scss-formatter)
 [![Installs](https://badgen.net/vs-marketplace/i/sibiraj-s.vscode-scss-formatter)](https://marketplace.visualstudio.com/items?itemName=sibiraj-s.vscode-scss-formatter)
 [![Downloads](https://badgen.net/vs-marketplace/d/sibiraj-s.vscode-scss-formatter)](https://marketplace.visualstudio.com/items?itemName=sibiraj-s.vscode-scss-formatter)
