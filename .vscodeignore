@@ -5,6 +5,7 @@ out/**/*.map
 src/**
 .gitignore
 .travis.yml
+.github/
 .gitattributes
 .huskyrc.json
 tsconfig.json
