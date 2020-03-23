@@ -13,6 +13,17 @@ All notable changes to this project will be documented in this file.
 > - Documentation
 > - Internal
 
+## v1.4.4 (2020-03-23)
+
+#### Dependency Updates
+
+- update `prettier` to v2.0.1 ([6228630](https://github.com/sibiraj-s/vscode-scss-formatter/commit/6228630))
+- bump devDependencies version to latest ([aa0922d](https://github.com/sibiraj-s/vscode-scss-formatter/commit/aa0922d))
+
+#### Internal
+
+- replace `tslint` with `typescript-eslint` ([f514b64](https://github.com/sibiraj-s/vscode-scss-formatter/commit/f514b64))
+
 ## v1.4.3 (2019-12-24)
 
 #### Dependency Updates
