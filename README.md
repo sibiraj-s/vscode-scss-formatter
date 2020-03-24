@@ -8,9 +8,9 @@
 
 SCSS Formatter is an extension for Visual Studio Code to format [SCSS](https://sass-lang.com/).
 
-SCSS Formatter uses [Prettier](https://github.com/prettier/prettier) under the hood to format files. Though Prettier supports formatting various file types. This extension focuses only on `SCSS`. Additionally it supports `CSS`.
+SCSS Formatter uses [Prettier] under the hood to format files. Though Prettier supports formatting various file types. This extension focuses only on `SCSS`. Additionally it supports `CSS`.
 
-Checkout [prettier-vscode](https://github.com/prettier/prettier-vscode) for an extended language support
+Checkout [prettier-vscode] for an extended language support
 
 Any issues related to formatting, open an issue [here](https://github.com/prettier/prettier/issues)
 
@@ -47,4 +47,11 @@ This extension contributes the following settings:
 - `scssFormatter.tabWidth`: Number of spaces per indentation-level.
 - `scssFormatter.singleQuote`: Use single quotes instead of double quotes.
 
-**Note:** Though prettier supports various options, only few were added to provide consistency. The `formatOnPaste` is not supported and won't be supported as it may lead to unexpected code formatting.
+**Note:** Though prettier supports various options, only few were added to provide consistency.
+
+### Known Issues
+
+- `formatOnPaste` is not supported as [Prettier] does not support formatting a selection or range of text for css/scss.
+
+[prettier]:https://github.com/prettier/prettier
+[prettier-vscode]: https://github.com/prettier/prettier-vscode
