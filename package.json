@@ -84,7 +84,7 @@
     "watch": "tsc -watch -p ./"
   },
   "dependencies": {
-    "prettier": "^2.0.1"
+    "prettier": "^2.0.2"
   },
   "devDependencies": {
     "@types/glob": "^7.1.1",
