@@ -13,6 +13,12 @@ All notable changes to this project will be documented in this file.
 > - Documentation
 > - Internal
 
+## v1.4.6 (2020-03-24)
+
+#### Internal
+
+- cleanup internal services ([8952533](https://github.com/sibiraj-s/vscode-scss-formatter/commit/8952533))
+
 ## v1.4.5 (2020-03-24)
 
 #### Dependency Updates
