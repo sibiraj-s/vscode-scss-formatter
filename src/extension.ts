@@ -1,7 +1,9 @@
 import { commands, Disposable, ExtensionContext, languages, window } from 'vscode';
 
-import { registerErrorHandlerDisposables, setupErrorHandler } from './errorHandler';
-import { SCSSFormatter } from './FormatterProvider';
+import SCSSFormatter from './FormatterProvider';
+import StatusBarService from './StatusBarService';
+import LoggingService from './LoggingService';
+
 import { languageSelector } from './utils';
 
 const ACTIVATION_COMMAND: Disposable = commands.registerCommand('scss-formatter.activate', () => {
@@ -10,13 +12,21 @@ const ACTIVATION_COMMAND: Disposable = commands.registerCommand('scss-formatter.
 
 // method is called when extension is activated
 export function activate(context: ExtensionContext) {
-  const scssFormatter = new SCSSFormatter();
+
+  const statusbarService = new StatusBarService();
+  const loggingService = new LoggingService(statusbarService);
+
+  const scssFormatter = new SCSSFormatter(
+    loggingService,
+    statusbarService
+  );
 
   context.subscriptions.push(languages.registerDocumentFormattingEditProvider(languageSelector, scssFormatter));
   context.subscriptions.push(ACTIVATION_COMMAND);
-  context.subscriptions.push(...setupErrorHandler());
-  context.subscriptions.push(...registerErrorHandlerDisposables());
+
+  context.subscriptions.push(...loggingService.registerDisposables());
+  context.subscriptions.push(...statusbarService.registerDisposables());
 }
 
 // method is called when extension is deactivated
-export function deactivate() { } // tslint:disable-line:no-empty
+export function deactivate() { }
