@@ -47,7 +47,7 @@ This extension contributes the following settings:
 - `scssFormatter.tabWidth`: Number of spaces per indentation-level.
 - `scssFormatter.singleQuote`: Use single quotes instead of double quotes.
 
-**Note:** Though prettier supports various options, only few were added to provide consistency.
+**Note:** Though prettier supports various options, only few were added to maintain consistency.
 
 ### Known Issues
 
