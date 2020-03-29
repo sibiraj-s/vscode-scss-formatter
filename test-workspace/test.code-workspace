@@ -1,0 +1,11 @@
+{
+  "folders": [
+    {
+      "path": "fixtures"
+    }
+  ],
+  "settings": {
+    "editor.detectIndentation": false,
+    "editor.tabSize": 2
+  }
+}

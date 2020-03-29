@@ -5,7 +5,7 @@ import {
 } from 'prettier';
 import {
   DocumentFormattingEditProvider, Position, Range, TextDocument,
-  TextEdit, workspace, WorkspaceConfiguration
+  TextEdit, workspace, WorkspaceConfiguration, FormattingOptions
 } from 'vscode';
 
 import LoggingService from './LoggingService';
@@ -54,6 +54,18 @@ class SCSSFormatter implements DocumentFormattingEditProvider {
     }
   }
 
+  private getPrettierOptions(document: TextDocument, options: FormattingOptions): PrettierOptions {
+    const wsConfig: WorkspaceConfiguration = workspace.getConfiguration('scssFormatter');
+    const { languageId } = document;
+
+    return {
+      ...wsConfig,
+      tabWidth: options.tabSize,
+      useTabs: !options.insertSpaces,
+      parser: languageId as BuiltInParserName
+    };
+  }
+
   // get range for the current document
   private fullDocumentRange(document: TextDocument): Range {
     const rangeStart: Position = document.lineAt(0).range.start;
@@ -61,25 +73,21 @@ class SCSSFormatter implements DocumentFormattingEditProvider {
     return new Range(rangeStart, rangeEnd);
   }
 
-  private async formatDocument(document: TextDocument): Promise<string> {
-    const workspaceConfiguration: WorkspaceConfiguration = workspace.getConfiguration('scssFormatter');
+  private async formatDocument(document: TextDocument, options: FormattingOptions): Promise<string> {
     const rawDocumentText = document.getText();
-    const { fileName, languageId } = document;
+    const { fileName } = document;
 
-    const options: PrettierOptions = {
-      ...Object.assign({}, workspaceConfiguration),
-      parser: languageId as BuiltInParserName
-    };
+    const prettierOptions = this.getPrettierOptions(document, options);
 
     return this.safeExecution(
-      () => format(rawDocumentText, options),
+      () => format(rawDocumentText, prettierOptions),
       rawDocumentText,
       fileName
     );
   }
 
-  public async provideDocumentFormattingEdits(document: TextDocument): Promise<TextEdit[]> {
-    const formattedDocument = await this.formatDocument(document);
+  public async provideDocumentFormattingEdits(document: TextDocument, options: FormattingOptions): Promise<TextEdit[]> {
+    const formattedDocument = await this.formatDocument(document, options);
     return [TextEdit.replace(this.fullDocumentRange(document), formattedDocument)];
   }
 }

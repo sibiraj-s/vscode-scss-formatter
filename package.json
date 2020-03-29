@@ -56,16 +56,6 @@
             "default": 120,
             "description": "Specify the line length that the formatter will wrap on"
           },
-          "scssFormatter.useTabs": {
-            "type": "boolean",
-            "default": false,
-            "description": "Indent lines with tabs instead of spaces."
-          },
-          "scssFormatter.tabWidth": {
-            "type": "number",
-            "default": 2,
-            "description": "Specify the number of spaces per indentation-level."
-          },
           "scssFormatter.singleQuote": {
             "type": "boolean",
             "default": false,

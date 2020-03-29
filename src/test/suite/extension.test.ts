@@ -34,6 +34,7 @@ async function formatWithVscode(
   const absPath = path.join(base.fsPath, file);
   const doc = await workspace.openTextDocument(absPath);
   const text = doc.getText();
+
   try {
     await window.showTextDocument(doc);
     console.time(file);
@@ -53,6 +54,7 @@ async function formatWithVscode(
  */
 async function formatSameAsPrettier(file: string) {
   const result = await formatWithVscode(file);
+
   if (result) {
     const prettierFormatted = format(result.source, {
       filepath: file,
@@ -68,7 +70,7 @@ async function formatSameAsPrettier(file: string) {
 suite('SCSS Formatter Extension Tests', () => {
   test('it should activate the extension', async () => await activateFormatter());
   test('it should show the output console', async () => await showOutputConsole());
-  test('it should fromat CSS', async () => await formatSameAsPrettier('./fixtures/ugly.css'));
-  test('it should format SCSS', async () => await formatSameAsPrettier('./fixtures/ugly.scss'));
+  test('it should fromat CSS', async () => await formatSameAsPrettier('./ugly.css'));
+  test('it should format SCSS', async () => await formatSameAsPrettier('./ugly.scss'));
   test('it should clear the logs from output console', async () => await clearOutput());
 });
