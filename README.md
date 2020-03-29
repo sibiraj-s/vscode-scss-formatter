@@ -43,11 +43,7 @@ Default keyboard shortcuts for **Format Document** command:
 This extension contributes the following settings:
 
 - `scssFormatter.printWidth`: Line length that the formatter will wrap on.
-- `scssFormatter.useTabs`: Indent lines with tabs instead of spaces.
-- `scssFormatter.tabWidth`: Number of spaces per indentation-level.
 - `scssFormatter.singleQuote`: Use single quotes instead of double quotes.
-
-**Note:** Though prettier supports various options, only few were added to maintain consistency.
 
 ### Known Issues
 
