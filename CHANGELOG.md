@@ -13,6 +13,17 @@ All notable changes to this project will be documented in this file.
 > - Documentation
 > - Internal
 
+## v2.0.0 (2020-03-29)
+
+#### Breaking Changes
+
+- removed `scssFormatter.tabWidth` in favour of `editor.tabSize` ([403e46d](https://github.com/sibiraj-s/vscode-scss-formatter/commit/403e46d))
+- removed `scssFormatter.useTabs` in favour of `editor.insertSpaces` ([403e46d](https://github.com/sibiraj-s/vscode-scss-formatter/commit/403e46d))
+
+#### Dependency Updates
+
+- update `@types/node` to v13.9.5 ([e00a06a](https://github.com/sibiraj-s/vscode-scss-formatter/commit/e00a06a))
+
 ## v1.4.6 (2020-03-24)
 
 #### Internal
