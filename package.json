@@ -33,17 +33,17 @@
       {
         "command": "scss-formatter.activate",
         "title": "Activate",
-        "category": "SCSS Formattrer"
+        "category": "SCSS Formatter"
       },
       {
         "command": "scss-formatter.show-output",
         "title": "Show Output",
-        "category": "SCSS Formattrer"
+        "category": "SCSS Formatter"
       },
       {
         "command": "scss-formatter.clear-output",
         "title": "Clear Output",
-        "category": "SCSS Formattrer"
+        "category": "SCSS Formatter"
       }
     ],
     "configuration": [
