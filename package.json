@@ -74,13 +74,13 @@
     "watch": "tsc -watch -p ./"
   },
   "dependencies": {
-    "prettier": "^2.0.2"
+    "prettier": "^2.0.5"
   },
   "devDependencies": {
     "@types/glob": "^7.1.1",
     "@types/mocha": "^7.0.2",
     "@types/node": "^13.9.5",
-    "@types/prettier": "^1.19.1",
+    "@types/prettier": "^2.0.0",
     "@types/vscode": "^1.43.0",
     "@typescript-eslint/eslint-plugin": "^2.25.0",
     "@typescript-eslint/parser": "^2.25.0",
