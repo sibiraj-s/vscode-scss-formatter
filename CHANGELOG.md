@@ -13,6 +13,17 @@ All notable changes to this project will be documented in this file.
 > - Documentation
 > - Internal
 
+## v2.0.1 (2020-05-09)
+
+#### Bug Fixes
+
+- fix a typo in configuration ([4f35669](https://github.com/sibiraj-s/vscode-scss-formatter/commit/4f35669))
+
+#### Dependency Updates
+
+- update `prettier` to v2.0.5 ([3e3c1b4](https://github.com/sibiraj-s/vscode-scss-formatter/commit/3e3c1b4))
+- update `husky` to v4.2.5 ([6c437fd](https://github.com/sibiraj-s/vscode-scss-formatter/commit/6c437fd))
+
 ## v2.0.0 (2020-03-29)
 
 #### Breaking Changes
