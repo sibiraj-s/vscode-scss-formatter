@@ -13,6 +13,14 @@ All notable changes to this project will be documented in this file.
 > - Documentation
 > - Internal
 
+## v2.0.2 (2020-08-24)
+
+#### Dependency Updates
+
+- update `prettier` to v2.0.2 ([8bb6d86](https://github.com/sibiraj-s/vscode-scss-formatter/commit/8bb6d86))
+- update devDependencies ([e4874cd](https://github.com/sibiraj-s/vscode-scss-formatter/commit/e4874cd))
+- downgrade typescript to v4 ([711a6dc](https://github.com/sibiraj-s/vscode-scss-formatter/commit/711a6dc))
+
 ## v2.0.1 (2020-05-09)
 
 #### Bug Fixes
