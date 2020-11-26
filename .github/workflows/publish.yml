@@ -1,15 +1,15 @@
-name: Tests
+name: Publish
 
 on:
   push:
-    branches: master
+    tags: v*
 
 env:
   NODE_VERSION: 14
 
 jobs:
   test:
-    name: Extension Tests
+    name: Publish to Markeplace
     runs-on: macos-latest
 
     steps:
@@ -29,5 +29,7 @@ jobs:
           npm ci
           npm ls --depth=0
 
-      - name: Vscode test
-        run: npm run test
+      - name: Publish
+        run: npm run deploy
+        env:
+          VSCE_PAT: ${{ secrets.VSCE_PAT }
