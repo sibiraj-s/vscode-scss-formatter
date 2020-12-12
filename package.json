@@ -68,7 +68,7 @@
   "scripts": {
     "compile": "tsc -p ./",
     "deploy": "vsce publish",
-    "lint": "eslint . --ext ts --ignore-path .gitignore",
+    "lint": "eslint . --ext js,ts --ignore-path .gitignore",
     "pretest": "npm run lint && npm run compile",
     "test": "node ./out/test/runTest.js",
     "vscode:prepublish": "npm run compile",
