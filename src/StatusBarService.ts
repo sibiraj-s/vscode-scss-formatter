@@ -1,17 +1,18 @@
 import {
   Disposable, languages, StatusBarAlignment,
-  StatusBarItem, TextEditor, window
+  StatusBarItem, TextEditor, window,
 } from 'vscode';
 
 import { EXTENSION_NAME, EXTENSION_VERSION, supportedLanguages } from './utils';
 
-function checkForInConsoleTabSwitch(editor: TextEditor): boolean {
+const checkForInConsoleTabSwitch = (editor: TextEditor): boolean => {
   // output and debug console is also seen as an editor
   // hence switching tabs will trigger the function
   // this prevents hiding statusBarItem when switching between tabs
   return ['debug', 'output'].some(
-    (part) => editor.document.uri.scheme === part);
-}
+    (part) => editor.document.uri.scheme === part,
+  );
+};
 
 class StatusBarService {
   private statusBarItem: StatusBarItem;
@@ -30,7 +31,7 @@ class StatusBarService {
       // Keep track whether to show/hide the statusbar
       window.onDidChangeActiveTextEditor((editor: TextEditor | undefined) => {
         this.toggleStatusBarItem(editor);
-      })
+      }),
     ];
   }
 
@@ -45,7 +46,11 @@ class StatusBarService {
 
       // hide statusBarItem if document changes and doesn't match supported languages
       const score = languages.match(supportedLanguages, editor.document);
-      score ? this.statusBarItem.show() : this.statusBarItem.hide();
+      if (score) {
+        this.statusBarItem.show();
+      } else {
+        this.statusBarItem.hide();
+      }
     } else {
       this.statusBarItem.hide();
     }

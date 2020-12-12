@@ -1,4 +1,6 @@
-import { commands, Disposable, ExtensionContext, languages, window } from 'vscode';
+import {
+  commands, Disposable, ExtensionContext, languages, window,
+} from 'vscode';
 
 import SCSSFormatter from './FormatterProvider';
 import StatusBarService from './StatusBarService';
@@ -11,14 +13,13 @@ const ACTIVATION_COMMAND: Disposable = commands.registerCommand('scss-formatter.
 });
 
 // method is called when extension is activated
-export function activate(context: ExtensionContext) {
-
+export const activate = (context: ExtensionContext) => {
   const statusbarService = new StatusBarService();
   const loggingService = new LoggingService(statusbarService);
 
   const scssFormatter = new SCSSFormatter(
     loggingService,
-    statusbarService
+    statusbarService,
   );
 
   context.subscriptions.push(languages.registerDocumentFormattingEditProvider(languageSelector, scssFormatter));
@@ -26,7 +27,8 @@ export function activate(context: ExtensionContext) {
 
   context.subscriptions.push(...loggingService.registerDisposables());
   context.subscriptions.push(...statusbarService.registerDisposables());
-}
+};
 
-// method is called when extension is deactivated
-export function deactivate() { }
+export const deactivate = () => {
+  // method is called when extension is deactivated
+};

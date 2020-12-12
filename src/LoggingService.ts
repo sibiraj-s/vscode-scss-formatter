@@ -1,4 +1,6 @@
-import { commands, Disposable, OutputChannel, window } from 'vscode';
+import {
+  commands, Disposable, OutputChannel, window,
+} from 'vscode';
 
 import StatusBarService from './StatusBarService';
 
@@ -6,6 +8,7 @@ import { EXTENSION_NAME } from './utils';
 
 class LoggingService {
   private outputChannel: OutputChannel;
+
   private statusbarService: StatusBarService;
 
   constructor(statusbarService: StatusBarService) {
@@ -36,7 +39,7 @@ class LoggingService {
       commands.registerCommand('scss-formatter.clear-output', () => {
         this.outputChannel.clear();
         this.statusbarService.reset();
-      })
+      }),
     ];
   }
 }

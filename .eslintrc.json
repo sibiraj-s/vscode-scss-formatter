@@ -1,22 +1,14 @@
 {
   "root": true,
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaVersion": 6,
-    "sourceType": "module"
-  },
-  "plugins": [
-    "@typescript-eslint"
+  "extends": [
+    "pegasus",
+    "pegasus/node",
+    "pegasus/typescript"
   ],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
   "rules": {
-    "@typescript-eslint/naming-convention": "warn",
-    "@typescript-eslint/semi": "error",
-    "curly": "warn",
-    "eqeqeq": "warn",
-    "no-throw-literal": "warn",
-    "quotes": [
-      "error",
-      "single"
-    ]
+    "no-console": "off"
   }
 }

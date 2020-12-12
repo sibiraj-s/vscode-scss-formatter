@@ -1,7 +1,7 @@
 import * as path from 'path';
 import { runTests } from 'vscode-test';
 
-async function main() {
+const main = async () => {
   try {
     // The folder containing the Extension Manifest package.json
     // Passed to `--extensionDevelopmentPath`
@@ -12,7 +12,7 @@ async function main() {
     const extensionTestsPath = path.resolve(__dirname, './suite/index');
 
     // extension test workspace
-    const extensionTestWorkspace = path.resolve(extensionDevelopmentPath, 'test-workspace','test.code-workspace');
+    const extensionTestWorkspace = path.resolve(extensionDevelopmentPath, 'test-workspace', 'test.code-workspace');
 
     // Download VS Code, unzip it and run the integration test
     await runTests({
@@ -20,13 +20,13 @@ async function main() {
       extensionTestsPath,
       launchArgs: [
         extensionTestWorkspace,
-        '--disable-extensions'
-      ]
+        '--disable-extensions',
+      ],
     });
   } catch (err) {
     console.error('Failed to run tests');
     process.exit(1);
   }
-}
+};
 
 main();
