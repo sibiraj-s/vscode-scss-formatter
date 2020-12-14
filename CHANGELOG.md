@@ -13,6 +13,12 @@ All notable changes to this project will be documented in this file.
 > - Documentation
 > - Internal
 
+## v2.0.5 (2020-12-14)
+
+#### Internal
+
+- update LICENSE ([af91dd0](https://github.com/sibiraj-s/vscode-scss-formatter/commit/af91dd0))
+
 ## v2.0.4 (2020-12-12)
 
 #### Dependency Updates
