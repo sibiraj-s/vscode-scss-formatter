@@ -59,7 +59,17 @@
           "scssFormatter.singleQuote": {
             "type": "boolean",
             "default": false,
-            "description": "Use single quotes instead of double quotes."
+            "description": "Use single quotes instead of double quotes"
+          },
+          "scssFormatter.trailingComma": {
+            "type": "string",
+            "default": "es5",
+            "enum": [
+              "es5",
+              "none",
+              "all"
+            ],
+            "description": "Print trailing commas wherever possible when multi-line"
           }
         }
       }

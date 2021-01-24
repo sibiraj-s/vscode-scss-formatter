@@ -64,8 +64,9 @@ const formatSameAsPrettier = async (file: string) => {
       singleQuote: false,
       tabWidth: 2,
       useTabs: false,
+      trailingComma: 'es5',
     });
-    assert.equal(result.result, prettierFormatted);
+    assert.strictEqual(result.result, prettierFormatted);
   }
 };
 
