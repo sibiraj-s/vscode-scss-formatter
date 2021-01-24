@@ -44,6 +44,7 @@ This extension contributes the following settings:
 
 - `scssFormatter.printWidth`: Line length that the formatter will wrap on.
 - `scssFormatter.singleQuote`: Use single quotes instead of double quotes.
+- `scssFormatter.trailingComma`: Print trailing commas wherever possible when multi-line.
 
 ### Known Issues
 
