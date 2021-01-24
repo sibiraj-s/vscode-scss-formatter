@@ -13,6 +13,16 @@ All notable changes to this project will be documented in this file.
 > - Documentation
 > - Internal
 
+## v2.1.0 (2021-01-24)
+
+#### Features
+
+- add option `trailingComma`, defaults to `es5` ([6d5f091](https://github.com/sibiraj-s/vscode-scss-formatter/commit/6d5f091))
+
+#### Dependency Updates
+
+- update devDependencies ([7e4aa79](https://github.com/sibiraj-s/vscode-scss-formatter/commit/7e4aa79)), ([8479872](https://github.com/sibiraj-s/vscode-scss-formatter/commit/8479872))
+
 ## v2.0.5 (2020-12-14)
 
 #### Internal
