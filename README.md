@@ -50,5 +50,5 @@ This extension contributes the following settings:
 
 - `formatOnPaste` is not supported as [Prettier] does not support formatting a selection or range of text for css/scss.
 
-[prettier]:https://github.com/prettier/prettier
+[prettier]: https://github.com/prettier/prettier
 [prettier-vscode]: https://github.com/prettier/prettier-vscode

@@ -1,0 +1,5 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+node scripts/check-engine.js
+npx --no-install lint-staged
