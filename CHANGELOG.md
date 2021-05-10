@@ -21,7 +21,7 @@ All notable changes to this project will be documented in this file.
 
 #### Internal
 
-- update to nodejs v17/npm v7 ([9e8bceb](https://github.com/sibiraj-s/vscode-scss-formatter/commit/9e8bceb))
+- update to nodejs v16/npm v7 ([9e8bceb](https://github.com/sibiraj-s/vscode-scss-formatter/commit/9e8bceb))
 
 ## v2.1.0 (2021-01-24)
 
