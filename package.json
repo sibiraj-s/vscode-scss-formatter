@@ -13,7 +13,7 @@
   "bugs": "https://github.com/sibiraj-s/vscode-scss-formatter/issues",
   "homepage": "https://marketplace.visualstudio.com/items?itemName=sibiraj-s.vscode-scss-formatter",
   "engines": {
-    "node": ">=12",
+    "node": ">=16.0.0",
     "vscode": "^1.56.0"
   },
   "icon": "assets/sass.png",
