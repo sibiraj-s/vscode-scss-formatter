@@ -5,6 +5,12 @@ import {
 
 import { EXTENSION_NAME, EXTENSION_VERSION, supportedLanguages } from './utils';
 
+export enum FormatterStatus {
+  Ready = 'check-all',
+  Success = 'check',
+  Error = 'alert',
+}
+
 const checkForInConsoleTabSwitch = (editor: TextEditor): boolean => {
   // output and debug console is also seen as an editor
   // hence switching tabs will trigger the function
@@ -19,7 +25,7 @@ class StatusBarService {
 
   constructor() {
     this.statusBarItem = window.createStatusBarItem(StatusBarAlignment.Right, -1);
-    this.statusBarItem.text = EXTENSION_NAME;
+    this.updateStatusBarItem(FormatterStatus.Ready);
     this.statusBarItem.tooltip = `${EXTENSION_NAME}: v${EXTENSION_VERSION}`;
     this.statusBarItem.command = 'scss-formatter.open-output';
 
@@ -41,8 +47,12 @@ class StatusBarService {
       return;
     }
 
-    if (editor !== undefined) {
-      if (checkForInConsoleTabSwitch(editor)) { return; }
+    if (!editor) {
+      this.statusBarItem.hide();
+    } else {
+      if (checkForInConsoleTabSwitch(editor)) {
+        return;
+      }
 
       // hide statusBarItem if document changes and doesn't match supported languages
       const score = languages.match(supportedLanguages, editor.document);
@@ -51,14 +61,12 @@ class StatusBarService {
       } else {
         this.statusBarItem.hide();
       }
-    } else {
-      this.statusBarItem.hide();
     }
   }
 
   // update statusBarItem text and tooltip
-  public updateStatusBarItem(message: string): void {
-    this.statusBarItem.text = message;
+  public updateStatusBarItem(status: FormatterStatus): void {
+    this.statusBarItem.text = `${EXTENSION_NAME}: $(${status.toString()})`;
     this.statusBarItem.show();
   }
 

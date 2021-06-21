@@ -9,9 +9,7 @@ import {
 } from 'vscode';
 
 import LoggingService from './LoggingService';
-import StatusBarService from './StatusBarService';
-
-import { EXTENSION_NAME } from './utils';
+import StatusBarService, { FormatterStatus } from './StatusBarService';
 
 // add filepath to the output message
 const addFilePathToMesssage = (message: string, fileName: string): string => {
@@ -64,11 +62,11 @@ class SCSSFormatter implements DocumentFormattingEditProvider {
   private safeExecution(cb: (() => string), rawDocumentText: string, fileName: string): string {
     try {
       this.loggingService.addToOutput(`${fileName} : Formatted Successfully`);
-      this.statusbarService.updateStatusBarItem(`${EXTENSION_NAME}: $(check)`);
+      this.statusbarService.updateStatusBarItem(FormatterStatus.Success);
       return cb();
     } catch (err) {
       this.loggingService.addToOutput(addFilePathToMesssage(err.message, fileName));
-      this.statusbarService.updateStatusBarItem(`${EXTENSION_NAME}: $(x)`);
+      this.statusbarService.updateStatusBarItem(FormatterStatus.Error);
       return rawDocumentText;
     }
   }
