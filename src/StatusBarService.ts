@@ -36,6 +36,7 @@ class StatusBarService {
     return [
       // Keep track whether to show/hide the statusbar
       window.onDidChangeActiveTextEditor((editor: TextEditor | undefined) => {
+        this.updateStatusBarItem(FormatterStatus.Ready);
         this.toggleStatusBarItem(editor);
       }),
     ];
