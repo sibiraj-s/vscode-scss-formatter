@@ -13,6 +13,13 @@ All notable changes to this project will be documented in this file.
 > - Documentation
 > - Internal
 
+## v2.2.2 (2021-06-21)
+
+#### Enhancements
+
+- reset statusbar icon while switching files ([f1f36c0](https://github.com/sibiraj-s/vscode-scss-formatter/commit/f1f36c0))
+- update statusbar icons ([69074b9](https://github.com/sibiraj-s/vscode-scss-formatter/commit/69074b9))
+
 ## v2.2.1 (2021-06-06)
 
 #### Dependency Updates
