@@ -22,8 +22,8 @@
   ],
   "activationEvents": [
     "onCommand:scss-formatter.activate",
-    "onCommand:scss-formatter.show-output",
-    "onCommand:scss-formatter.clear-output",
+    "onCommand:scss-formatter.output.show",
+    "onCommand:scss-formatter.output.clear",
     "onLanguage:css",
     "onLanguage:scss"
   ],
@@ -36,12 +36,12 @@
         "category": "SCSS Formatter"
       },
       {
-        "command": "scss-formatter.show-output",
+        "command": "scss-formatter.output.show",
         "title": "Show Output",
         "category": "SCSS Formatter"
       },
       {
-        "command": "scss-formatter.clear-output",
+        "command": "scss-formatter.output.clear",
         "title": "Clear Output",
         "category": "SCSS Formatter"
       }

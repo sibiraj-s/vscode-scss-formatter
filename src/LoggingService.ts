@@ -30,13 +30,10 @@ class LoggingService {
 
   public registerDisposables(): Disposable[] {
     return [
-      commands.registerCommand('scss-formatter.open-output', () => {
+      commands.registerCommand('scss-formatter.output.show', () => {
         this.outputChannel.show();
       }),
-      commands.registerCommand('scss-formatter.show-output', () => {
-        this.outputChannel.show();
-      }),
-      commands.registerCommand('scss-formatter.clear-output', () => {
+      commands.registerCommand('scss-formatter.output.clear', () => {
         this.outputChannel.clear();
         this.statusbarService.reset();
       }),

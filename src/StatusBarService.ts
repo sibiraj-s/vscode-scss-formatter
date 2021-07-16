@@ -27,7 +27,7 @@ class StatusBarService {
     this.statusBarItem = window.createStatusBarItem(StatusBarAlignment.Right, -1);
     this.updateStatusBarItem(FormatterStatus.Ready);
     this.statusBarItem.tooltip = `${EXTENSION_NAME}: v${EXTENSION_VERSION}`;
-    this.statusBarItem.command = 'scss-formatter.open-output';
+    this.statusBarItem.command = 'scss-formatter.output.show';
 
     this.toggleStatusBarItem(window.activeTextEditor);
   }

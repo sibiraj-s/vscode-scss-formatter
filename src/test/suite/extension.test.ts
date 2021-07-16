@@ -12,12 +12,12 @@ const activateFormatter = async () => {
 };
 
 const showOutputConsole = async () => {
-  await commands.executeCommand('scss-formatter.open-output');
+  await commands.executeCommand('scss-formatter.output.show');
 };
 
 // clear console output from formatter
 const clearOutput = async () => {
-  await commands.executeCommand('scss-formatter.clear-output');
+  await commands.executeCommand('scss-formatter.output.clear');
 };
 
 /**
