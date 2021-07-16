@@ -13,6 +13,17 @@ All notable changes to this project will be documented in this file.
 > - Documentation
 > - Internal
 
+## v2.2.3 (2021-07-16)
+
+#### Bug Fixes
+
+- remove duplicate commands ([cf22803](https://github.com/sibiraj-s/vscode-scss-formatter/commit/cf22803))
+
+#### Dependency Updates
+
+- update `prettier` to v2.3.1 ([d4dd1eb](https://github.com/sibiraj-s/vscode-scss-formatter/commit/d4dd1eb))
+- update devDependencies ([80d3de6](https://github.com/sibiraj-s/vscode-scss-formatter/commit/80d3de6))
+
 ## v2.2.2 (2021-06-21)
 
 #### Enhancements
