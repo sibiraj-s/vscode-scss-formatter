@@ -50,39 +50,23 @@ class SCSSFormatter implements DocumentFormattingEditProvider {
     this.statusbarService = statusbarService;
   }
 
-  /**
-   * Runs prettier and updates the status on the statusbarItem
-   *
-   * @param cb callback function to execute prettier
-   * @param rawDocumentText unformatted source document
-   * @param fileName name/path of the file formatted
-   *
-   * @returns {string} string with either formatted/raw document
-   */
-  private safeExecution(cb: (() => string), rawDocumentText: string, fileName: string): string {
-    try {
-      this.loggingService.addToOutput(`${fileName} : Formatted Successfully`);
-      this.statusbarService.updateStatusBarItem(FormatterStatus.Success);
-      return cb();
-    } catch (err) {
-      const errMessage = err instanceof Error ? err.message : String(err);
-      this.loggingService.addToOutput(addFilePathToMesssage(errMessage, fileName));
-      this.statusbarService.updateStatusBarItem(FormatterStatus.Error);
-      return rawDocumentText;
-    }
-  }
-
   private formatDocument(document: TextDocument, options: FormattingOptions): string {
     const rawDocumentText = document.getText();
     const { fileName } = document;
 
     const prettierOptions = getPrettierOptions(document, options);
 
-    return this.safeExecution(
-      () => format(rawDocumentText, prettierOptions),
-      rawDocumentText,
-      fileName,
-    );
+    try {
+      const formattedDocument = format(rawDocumentText, prettierOptions);
+      this.loggingService.addToOutput(`${fileName} : Formatted Successfully`);
+      this.statusbarService.updateStatusBarItem(FormatterStatus.Success);
+      return formattedDocument;
+    } catch (err) {
+      const errMessage = err instanceof Error ? err.message : String(err);
+      this.loggingService.addToOutput(addFilePathToMesssage(errMessage, fileName));
+      this.statusbarService.updateStatusBarItem(FormatterStatus.Error);
+      return rawDocumentText;
+    }
   }
 
   public provideDocumentFormattingEdits(document: TextDocument, options: FormattingOptions): TextEdit[] {
