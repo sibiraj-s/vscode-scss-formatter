@@ -65,7 +65,8 @@ class SCSSFormatter implements DocumentFormattingEditProvider {
       this.statusbarService.updateStatusBarItem(FormatterStatus.Success);
       return cb();
     } catch (err) {
-      this.loggingService.addToOutput(addFilePathToMesssage(err.message, fileName));
+      const errMessage = err instanceof Error ? err.message : String(err);
+      this.loggingService.addToOutput(addFilePathToMesssage(errMessage, fileName));
       this.statusbarService.updateStatusBarItem(FormatterStatus.Error);
       return rawDocumentText;
     }
