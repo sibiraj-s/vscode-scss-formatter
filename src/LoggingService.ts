@@ -7,12 +7,11 @@ import StatusBarService from './StatusBarService';
 import { EXTENSION_NAME } from './utils';
 
 class LoggingService {
-  private outputChannel: OutputChannel;
+  private outputChannel: OutputChannel = window.createOutputChannel(EXTENSION_NAME);
 
   private statusbarService: StatusBarService;
 
   constructor(statusbarService: StatusBarService) {
-    this.outputChannel = window.createOutputChannel(EXTENSION_NAME);
     this.statusbarService = statusbarService;
   }
 

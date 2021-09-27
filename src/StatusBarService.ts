@@ -1,6 +1,6 @@
 import {
   Disposable, languages, StatusBarAlignment,
-  StatusBarItem, TextEditor, window,
+  StatusBarItem, TextEditor, ThemeColor, window,
 } from 'vscode';
 
 import { EXTENSION_NAME, EXTENSION_VERSION, supportedLanguages } from './utils';
@@ -67,6 +67,10 @@ class StatusBarService {
 
   // update statusBarItem text and tooltip
   public updateStatusBarItem(status: FormatterStatus): void {
+    this.statusBarItem.backgroundColor = new ThemeColor(
+      status === FormatterStatus.Error ? 'statusBarItem.errorBackground' : '',
+    );
+
     this.statusBarItem.text = `${EXTENSION_NAME}: $(${status.toString()})`;
     this.statusBarItem.show();
   }
