@@ -99,11 +99,11 @@
     "prettier": "^2.4.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "^13.1.0",
-    "@commitlint/config-conventional": "^13.1.0",
+    "@commitlint/cli": "^13.2.0",
+    "@commitlint/config-conventional": "^13.2.0",
     "@types/mocha": "^9.0.0",
     "@types/node": "^16.10.1",
-    "@types/prettier": "^2.4.0",
+    "@types/prettier": "^2.4.1",
     "@types/vscode": "^1.60.0",
     "@types/webpack-env": "^1.16.2",
     "@vscode/test-electron": "^1.6.2",
