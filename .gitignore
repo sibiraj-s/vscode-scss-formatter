@@ -146,5 +146,7 @@ $RECYCLE.BIN/
 
 ### VSCode Files ###
 out
+dist
 .vscode-test/
+.vscode-test-web/
 *.vsix

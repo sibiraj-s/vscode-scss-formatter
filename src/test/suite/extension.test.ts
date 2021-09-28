@@ -1,6 +1,5 @@
 /* tslint:disable: no-console */
 import * as assert from 'assert';
-import * as path from 'path';
 import { format } from 'prettier';
 import {
   commands, Uri, window, workspace,
@@ -27,13 +26,19 @@ const clearOutput = async () => {
  * @returns source code and resulting code
  */
 const formatWithVscode = async (
+  workspaceFolderName:string,
   file: string,
-  base: Uri = workspace.workspaceFolders![0].uri,
 ): Promise<{
   result: string;
   source: string;
 } | null> => {
-  const absPath = path.join(base.fsPath, file);
+  const workspaceFolder = workspace.workspaceFolders?.find((folder) => folder.name === workspaceFolderName);
+
+  if (!workspaceFolder) {
+    throw new Error(`Unable to find workspace: ${workspaceFolder}`);
+  }
+
+  const absPath = Uri.joinPath(workspaceFolder.uri, file).path;
   const doc = await workspace.openTextDocument(absPath);
   const text = doc.getText();
 
@@ -55,7 +60,7 @@ const formatWithVscode = async (
  * @param file path relative to workspace root
  */
 const formatSameAsPrettier = async (file: string) => {
-  const result = await formatWithVscode(file);
+  const result = await formatWithVscode('fixtures', file);
 
   if (result) {
     const prettierFormatted = format(result.source, {
