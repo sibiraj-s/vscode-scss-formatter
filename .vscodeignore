@@ -9,6 +9,7 @@ build/**
 .yarnrc
 package-lock.json
 vsc-extension-quickstart.md
+webpack.config.js
 **/tsconfig.json
 **/.eslintrc.json
 **/*.map
