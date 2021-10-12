@@ -4,8 +4,6 @@
  *--------------------------------------------------------------------------------------------*/
 
 // @ts-check
-
-// @ts-check
 /** @typedef {import('webpack').Configuration} WebpackConfig * */
 
 const path = require('path');
