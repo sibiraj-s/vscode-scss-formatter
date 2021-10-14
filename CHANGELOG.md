@@ -13,6 +13,17 @@ All notable changes to this project will be documented in this file.
 > - Documentation
 > - Internal
 
+## v2.3.0 (2021-10-14)
+
+#### Features
+
+- add support for untrusted workspaces ([bc0dc37](https://github.com/sibiraj-s/vscode-scss-formatter/commit/bc0dc37))
+- apply error bg on stausbar item during format error ([811de84](https://github.com/sibiraj-s/vscode-scss-formatter/commit/811de84))
+
+#### Dependency Updates
+
+- update `prettier` to v2.4.1 ([ea54976](https://github.com/sibiraj-s/vscode-scss-formatter/commit/ea54976))
+
 ## v2.2.4 (2021-09-10)
 
 #### Dependency Updates
