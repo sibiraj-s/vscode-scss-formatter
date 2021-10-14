@@ -30,7 +30,10 @@
   "main": "./dist/extension.js",
   "browser": "./dist/web/extension.js",
   "capabilities": {
-    "virtualWorkspaces": true
+    "virtualWorkspaces": true,
+    "untrustedWorkspaces": {
+      "supported": true
+    }
   },
   "contributes": {
     "commands": [
