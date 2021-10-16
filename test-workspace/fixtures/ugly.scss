@@ -185,3 +185,7 @@ input { margin-top: 8px; outline: 0; background:whitesmoke; font-size:20px; padd
 width:calc(100% - 20px); }
 [for="pastezone"],
 [for="peninclude"]{font-weight: 700; }
+
+.class {
+  width: min(91vw, var(--max-width));
+}

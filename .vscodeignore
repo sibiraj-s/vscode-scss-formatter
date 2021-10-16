@@ -4,6 +4,7 @@
 src/**
 out/**
 node_modules/**
+!node_modules/prettier
 build/**
 .gitignore
 .yarnrc
