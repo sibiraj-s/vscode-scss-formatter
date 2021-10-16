@@ -4,7 +4,6 @@
 src/**
 out/**
 node_modules/**
-!node_modules/prettier
 build/**
 .gitignore
 .yarnrc
@@ -15,8 +14,14 @@ webpack.config.js
 **/.eslintrc.json
 **/*.map
 **/*.ts
-.github/
 .gitattributes
 .huskyrc.json
 tsconfig.json
 dist/web/test/**
+
+# project
+.github/
+!node_modules/prettier
+test-workspace/
+scripts/
+commitlint.config.js
