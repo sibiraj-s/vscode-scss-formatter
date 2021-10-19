@@ -1,8 +1,3 @@
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
 // @ts-check
 /** @typedef {import('webpack').Configuration} WebpackConfig * */
 
@@ -43,6 +38,9 @@ const extensionConfig = {
     ],
   },
   devtool: 'nosources-source-map',
+  infrastructureLogging: {
+    level: 'log', // enables logging required for problem matchers
+  },
 };
 
 /** @type WebpackConfig */
@@ -93,6 +91,9 @@ const webExtensionConfig = {
     hints: false,
   },
   devtool: 'nosources-source-map', // create a source map that points to the original source file
+  infrastructureLogging: {
+    level: 'log', // enables logging required for problem matchers
+  },
 };
 
 module.exports = [extensionConfig, webExtensionConfig];
