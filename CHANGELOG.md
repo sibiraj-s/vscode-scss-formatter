@@ -13,6 +13,18 @@ All notable changes to this project will be documented in this file.
 > - Documentation
 > - Internal
 
+## v2.3.2 (2021-10-19)
+
+#### Breaking Changes
+
+- remove useless activate command ([579eb5c](https://github.com/sibiraj-s/vscode-scss-formatter/commit/579eb5c))
+
+#### Internal
+
+- update to eslint v8 ([af214d7](https://github.com/sibiraj-s/vscode-scss-formatter/commit/af214d7))
+- enable webpack infrastructureLogging ([7ce9c3f](https://github.com/sibiraj-s/vscode-scss-formatter/commit/7ce9c3f))
+- update recommended extensions ([2b99970](https://github.com/sibiraj-s/vscode-scss-formatter/commit/2b99970))
+
 ## v2.3.1 (2021-10-16)
 
 #### Bug Fixes
