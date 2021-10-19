@@ -5,11 +5,6 @@ import {
   commands, Uri, window, workspace,
 } from 'vscode';
 
-// activate the formatter
-const activateFormatter = async () => {
-  await commands.executeCommand('scss-formatter.activate');
-};
-
 const showOutputConsole = async () => {
   await commands.executeCommand('scss-formatter.output.show');
 };
@@ -26,7 +21,7 @@ const clearOutput = async () => {
  * @returns source code and resulting code
  */
 const formatWithVscode = async (
-  workspaceFolderName:string,
+  workspaceFolderName: string,
   file: string,
 ): Promise<{
   result: string;
@@ -76,7 +71,6 @@ const formatSameAsPrettier = async (file: string) => {
 };
 
 suite('SCSS Formatter Extension Tests', () => {
-  test('it should activate the extension', async () => activateFormatter());
   test('it should show the output console', async () => showOutputConsole());
   test('it should fromat CSS', async () => formatSameAsPrettier('./ugly.css'));
   test('it should format SCSS', async () => formatSameAsPrettier('./ugly.scss'));

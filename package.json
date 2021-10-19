@@ -21,7 +21,6 @@
     "Formatters"
   ],
   "activationEvents": [
-    "onCommand:scss-formatter.activate",
     "onCommand:scss-formatter.output.show",
     "onCommand:scss-formatter.output.clear",
     "onLanguage:css",
@@ -37,11 +36,6 @@
   },
   "contributes": {
     "commands": [
-      {
-        "command": "scss-formatter.activate",
-        "title": "Activate",
-        "category": "SCSS Formatter"
-      },
       {
         "command": "scss-formatter.output.show",
         "title": "Show Output",
