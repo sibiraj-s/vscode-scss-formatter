@@ -17,7 +17,7 @@ const extensionConfig = {
   },
   externals: {
     vscode: 'commonjs vscode', // the vscode-module is created on-the-fly and must be excluded. Add other modules that cannot be webpack'ed, 📖 -> https://webpack.js.org/configuration/externals/
-    // modules added here also need to be added in the .vsceignore file
+    // modules added here also need to be added in the .vscodeignore file
     prettier: 'commonjs prettier',
   },
   resolve: {
