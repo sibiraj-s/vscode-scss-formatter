@@ -32,5 +32,11 @@ jobs:
           npm ci
           npm ls --depth=0
 
+      - name: Build
+        name: npm run compile
+
+      - name: Compile test files
+        run: npm run compile-tests
+
       - name: Vscode test
         run: npm run test
