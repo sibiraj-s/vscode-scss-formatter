@@ -14,6 +14,7 @@ const extensionConfig = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'extension.js',
     libraryTarget: 'commonjs2',
+    clean: true,
   },
   externals: {
     vscode: 'commonjs vscode', // the vscode-module is created on-the-fly and must be excluded. Add other modules that cannot be webpack'ed, 📖 -> https://webpack.js.org/configuration/externals/
@@ -49,13 +50,14 @@ const webExtensionConfig = {
   target: 'webworker', // extensions run in a webworker context
   entry: {
     'extension': './src/extension.ts',
-    'test/suite/index': './src/test/suite/index-web.ts',
+    'test/suite/index-web': './src/test/suite/index-web.ts',
   },
   output: {
     filename: '[name].js',
     path: path.join(__dirname, './dist/web'),
     libraryTarget: 'commonjs',
     devtoolModuleFilenameTemplate: '../../[resource-path]',
+    clean: true,
   },
   resolve: {
     mainFields: ['browser', 'module', 'main'], // look for `browser` entry point in imported node modules

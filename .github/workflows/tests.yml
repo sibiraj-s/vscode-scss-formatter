@@ -35,8 +35,14 @@ jobs:
       - name: Build
         name: npm run compile
 
-      - name: Compile test files
+      - name: Compile node tests
         run: npm run compile-tests
+
+      # - name: Compile web tests
+      #   run: npm run compile-tests-web
 
       - name: Vscode test
         run: npm run test
+
+      # - name: Compile web tests
+      #   run: npm run test-web
