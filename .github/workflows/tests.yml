@@ -33,7 +33,7 @@ jobs:
           npm ls --depth=0
 
       - name: Build
-        name: npm run compile
+        run: npm run compile
 
       - name: Compile node tests
         run: npm run compile-tests
