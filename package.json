@@ -2,7 +2,7 @@
   "name": "vscode-scss-formatter",
   "displayName": "SCSS Formatter",
   "description": "A Visual Studio Code Extension to format SCSS",
-  "version": "2.3.2",
+  "version": "2.3.3",
   "publisher": "sibiraj-s",
   "licence": "MIT",
   "private": true,

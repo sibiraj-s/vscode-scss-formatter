@@ -13,6 +13,12 @@ All notable changes to this project will be documented in this file.
 > - Documentation
 > - Internal
 
+## v2.3.3 (2021-12-08)
+
+#### Dependency Updates
+
+- update `prettier` to v2.5.1 ([6b614fc](https://github.com/sibiraj-s/vscode-scss-formatter/commit/6b614fc))
+
 ## v2.3.2 (2021-10-19)
 
 #### Breaking Changes
