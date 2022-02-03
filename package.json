@@ -99,7 +99,7 @@
     "@commitlint/cli": "^16.1.0",
     "@commitlint/config-conventional": "^16.0.0",
     "@types/mocha": "^9.1.0",
-    "@types/node": "^16.11.22",
+    "@types/node": "16.11.21",
     "@types/prettier": "^2.4.3",
     "@types/vscode": "^1.63.2",
     "@types/webpack-env": "^1.16.3",
