@@ -1,2 +1,2 @@
-'*.{js,ts}': eslint --fix --ignore-path .gitignore
+'*.{js,ts}': eslint --fix
 '*.md': prettier --write
