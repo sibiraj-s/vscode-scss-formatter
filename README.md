@@ -6,8 +6,6 @@
 [![Downloads](https://badgen.net/vs-marketplace/d/sibiraj-s.vscode-scss-formatter)](https://marketplace.visualstudio.com/items?itemName=sibiraj-s.vscode-scss-formatter)
 [![Ratings](https://badgen.net/vs-marketplace/rating/sibiraj-s.vscode-scss-formatter)](https://marketplace.visualstudio.com/items?itemName=sibiraj-s.vscode-scss-formatter&ssr=false#review-details)
 
-<!-- [![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/sibiraj-s/vscode-scss-formatter) -->
-
 SCSS Formatter is an extension for Visual Studio Code to format [SCSS](https://sass-lang.com/).
 
 SCSS Formatter uses [Prettier] under the hood to format files. Though Prettier supports formatting various file types. This extension focuses only on `SCSS`. Additionally it supports `CSS`.
