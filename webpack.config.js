@@ -1,5 +1,5 @@
 // @ts-check
-/** @typedef {import('webpack').Configuration} WebpackConfig * */
+/** @typedef {import('webpack').Configuration} WebpackConfig */
 
 const path = require('path');
 const webpack = require('webpack');
