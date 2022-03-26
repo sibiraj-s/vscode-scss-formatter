@@ -1,13 +1,12 @@
 import type { BuiltInParserName, Options as PrettierOptions } from 'prettier';
 import { format } from 'prettier/standalone';
 import * as postcssPlugin from 'prettier/parser-postcss';
-import {
-  type DocumentFormattingEditProvider, type Position, Range, TextDocument,
-  TextEdit, workspace, type WorkspaceConfiguration, type FormattingOptions,
-} from 'vscode';
+import { TextDocument, workspace, type WorkspaceConfiguration, type FormattingOptions, languages } from 'vscode';
 
 import LoggingService from './LoggingService';
 import StatusBarService, { FormatterStatus } from './StatusBarService';
+import FormatProvider from './FormatProvider';
+import { languageSelector } from './utils';
 
 // add filepath to the output message
 const addFilePathToMesssage = (message: string, fileName: string): string => {
@@ -33,24 +32,14 @@ const getPrettierOptions = (document: TextDocument, options: FormattingOptions):
   };
 };
 
-// get range for the current document
-const fullDocumentRange = (document: TextDocument): Range => {
-  const rangeStart: Position = document.lineAt(0).range.start;
-  const rangeEnd: Position = document.lineAt(document.lineCount - 1).range.end;
-  return new Range(rangeStart, rangeEnd);
-};
+class FormatService {
+  private provider: FormatProvider;
 
-class SCSSFormatter implements DocumentFormattingEditProvider {
-  private loggingService: LoggingService;
-
-  private statusbarService: StatusBarService;
-
-  constructor(loggingService: LoggingService, statusbarService: StatusBarService) {
-    this.loggingService = loggingService;
-    this.statusbarService = statusbarService;
+  constructor(private loggingService: LoggingService, private statusbarService: StatusBarService) {
+    this.provider = new FormatProvider(this.formatDocument);
   }
 
-  private formatDocument(document: TextDocument, options: FormattingOptions): string {
+  private formatDocument = (document: TextDocument, options: FormattingOptions): string => {
     const rawDocumentText = document.getText();
     const { fileName } = document;
 
@@ -67,12 +56,13 @@ class SCSSFormatter implements DocumentFormattingEditProvider {
       this.statusbarService.updateStatusBarItem(FormatterStatus.Error);
       return rawDocumentText;
     }
-  }
+  };
 
-  public provideDocumentFormattingEdits(document: TextDocument, options: FormattingOptions): TextEdit[] {
-    const formattedDocument = this.formatDocument(document, options);
-    return [TextEdit.replace(fullDocumentRange(document), formattedDocument)];
+  public registerDisposables() {
+    return [
+      languages.registerDocumentFormattingEditProvider(languageSelector, this.provider),
+    ];
   }
 }
 
-export default SCSSFormatter;
+export default FormatService;
