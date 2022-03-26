@@ -1,6 +1,6 @@
 import {
-  Disposable, languages, StatusBarAlignment,
-  StatusBarItem, TextEditor, ThemeColor, window,
+  type Disposable, languages, StatusBarAlignment,
+  type StatusBarItem, TextEditor, ThemeColor, window,
 } from 'vscode';
 
 import { EXTENSION_NAME, EXTENSION_VERSION, supportedLanguages } from './utils';

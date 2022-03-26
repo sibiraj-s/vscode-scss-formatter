@@ -1,6 +1,4 @@
-import {
-  commands, Disposable, OutputChannel, window,
-} from 'vscode';
+import { commands, type Disposable, type OutputChannel, window } from 'vscode';
 
 import StatusBarService from './StatusBarService';
 

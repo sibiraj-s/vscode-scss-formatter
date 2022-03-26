@@ -1,11 +1,9 @@
+import type { BuiltInParserName, Options as PrettierOptions } from 'prettier';
+import { format } from 'prettier/standalone';
+import * as postcssPlugin from 'prettier/parser-postcss';
 import {
-  BuiltInParserName,
-  format,
-  Options as PrettierOptions,
-} from 'prettier';
-import {
-  DocumentFormattingEditProvider, Position, Range, TextDocument,
-  TextEdit, workspace, WorkspaceConfiguration, FormattingOptions,
+  type DocumentFormattingEditProvider, type Position, Range, TextDocument,
+  TextEdit, workspace, type WorkspaceConfiguration, type FormattingOptions,
 } from 'vscode';
 
 import LoggingService from './LoggingService';
@@ -23,13 +21,15 @@ const addFilePathToMesssage = (message: string, fileName: string): string => {
 
 const getPrettierOptions = (document: TextDocument, options: FormattingOptions): PrettierOptions => {
   const wsConfig: WorkspaceConfiguration = workspace.getConfiguration('scssFormatter');
-  const { languageId } = document;
 
   return {
     ...wsConfig,
     tabWidth: options.tabSize,
     useTabs: !options.insertSpaces,
-    parser: languageId as BuiltInParserName,
+    parser: document.languageId as BuiltInParserName,
+    plugins: [
+      postcssPlugin,
+    ],
   };
 };
 

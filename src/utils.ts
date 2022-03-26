@@ -1,4 +1,4 @@
-import { BuiltInParserName } from 'prettier';
+import type { BuiltInParserName } from 'prettier';
 import { DocumentSelector, extensions } from 'vscode';
 
 /**

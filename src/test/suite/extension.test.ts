@@ -1,9 +1,8 @@
 /* tslint:disable: no-console */
 import * as assert from 'assert';
-import { format } from 'prettier';
-import {
-  commands, Uri, window, workspace,
-} from 'vscode';
+import { format } from 'prettier/standalone';
+import * as postcssPlugin from 'prettier/parser-postcss';
+import { commands, Uri, window, workspace } from 'vscode';
 
 const showOutputConsole = async () => {
   await commands.executeCommand('scss-formatter.output.show');
@@ -16,8 +15,8 @@ const clearOutput = async () => {
 
 /**
  * loads and format a file.
+ * @param workspaceFolderName folder name in the workspace
  * @param file path relative to base URI (a workspaceFolder's URI)
- * @param base base URI
  * @returns source code and resulting code
  */
 const formatWithVscode = async (
@@ -65,6 +64,9 @@ const formatSameAsPrettier = async (file: string) => {
       tabWidth: 2,
       useTabs: false,
       trailingComma: 'es5',
+      plugins: [
+        postcssPlugin,
+      ],
     });
     assert.strictEqual(result.result, prettierFormatted);
   }

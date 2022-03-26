@@ -1,4 +1,4 @@
-import { ExtensionContext, languages } from 'vscode';
+import { type ExtensionContext, languages } from 'vscode';
 
 import SCSSFormatter from './FormatterProvider';
 import StatusBarService from './StatusBarService';
