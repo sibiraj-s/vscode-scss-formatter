@@ -20,7 +20,7 @@ const supportedLanguages: BuiltInParserName[] = [
 
 /** files to format by language */
 const languageSelector: DocumentSelector = supportedLanguages.map(
-  (language) => ({ scheme: 'file', language }),
+  (language) => ({ language }),
 );
 
 const EXTENSION_NAME = 'SCSS Formatter';
