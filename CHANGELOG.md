@@ -13,6 +13,12 @@ All notable changes to this project will be documented in this file.
 > - Documentation
 > - Internal
 
+## v2.4.1 (2022-03-26)
+
+#### Bug Fixes
+
+- fix language selectors for vscode web ([c973401](https://github.com/sibiraj-s/vscode-scss-formatter/commit/c973401))
+
 ## v2.4.0 (2022-03-26)
 
 #### Dependency Updates
