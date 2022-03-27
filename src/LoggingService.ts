@@ -1,7 +1,6 @@
 import { commands, type Disposable, type OutputChannel, window } from 'vscode';
 
 import StatusBarService from './StatusBarService';
-
 import { EXTENSION_NAME } from './utils';
 
 class LoggingService {
@@ -27,10 +26,10 @@ class LoggingService {
 
   public registerDisposables(): Disposable[] {
     return [
-      commands.registerCommand('scss-formatter.output.show', () => {
+      commands.registerCommand('scssFormatter.showOutput', () => {
         this.outputChannel.show();
       }),
-      commands.registerCommand('scss-formatter.output.clear', () => {
+      commands.registerCommand('scssFormatter.clearOutput', () => {
         this.outputChannel.clear();
         this.statusbarService.reset();
       }),

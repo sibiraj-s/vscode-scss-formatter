@@ -1,5 +1,5 @@
 import type { BuiltInParserName } from 'prettier';
-import { DocumentSelector, extensions } from 'vscode';
+import { type DocumentSelector, extensions } from 'vscode';
 
 /**
  * @returns {string} package version
@@ -13,22 +13,13 @@ const getExtensionVersion = (): string | null => {
 };
 
 /** languages supported by scss formatter */
-const supportedLanguages: BuiltInParserName[] = [
+export const supportedLanguages: BuiltInParserName[] = [
   'css',
   'scss',
 ];
 
 /** files to format by language */
-const languageSelector: DocumentSelector = supportedLanguages.map(
-  (language) => ({ language }),
-);
+export const languageSelector: DocumentSelector = supportedLanguages.map((language) => ({ language }));
 
-const EXTENSION_NAME = 'SCSS Formatter';
-const EXTENSION_VERSION: string | null = getExtensionVersion();
-
-export {
-  EXTENSION_NAME,
-  EXTENSION_VERSION,
-  supportedLanguages,
-  languageSelector,
-};
+export const EXTENSION_NAME = 'SCSS Formatter';
+export const EXTENSION_VERSION: string | null = getExtensionVersion();

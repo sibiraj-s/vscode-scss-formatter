@@ -1,9 +1,9 @@
 {
   "name": "vscode-scss-formatter",
   "displayName": "SCSS Formatter",
-  "description": "A Visual Studio Code Extension to format SCSS",
+  "description": "%scssFormatter.description%",
   "version": "2.4.1",
-  "publisher": "sibiraj-s",
+  "author": "sibiraj-s",
   "licence": "MIT",
   "private": true,
   "repository": {
@@ -15,66 +15,6 @@
   "engines": {
     "node": ">=16.0.0",
     "vscode": "^1.65.0"
-  },
-  "icon": "assets/sass.png",
-  "categories": [
-    "Formatters"
-  ],
-  "activationEvents": [
-    "onCommand:scss-formatter.output.show",
-    "onCommand:scss-formatter.output.clear",
-    "onLanguage:css",
-    "onLanguage:scss"
-  ],
-  "main": "./dist/extension.js",
-  "browser": "./dist/web/extension.js",
-  "capabilities": {
-    "virtualWorkspaces": true,
-    "untrustedWorkspaces": {
-      "supported": true
-    }
-  },
-  "contributes": {
-    "commands": [
-      {
-        "command": "scss-formatter.output.show",
-        "title": "Show Output",
-        "category": "SCSS Formatter"
-      },
-      {
-        "command": "scss-formatter.output.clear",
-        "title": "Clear Output",
-        "category": "SCSS Formatter"
-      }
-    ],
-    "configuration": [
-      {
-        "type": "object",
-        "title": "SCSS Formatter",
-        "properties": {
-          "scssFormatter.printWidth": {
-            "type": "number",
-            "default": 120,
-            "description": "Specify the line length that the formatter will wrap on"
-          },
-          "scssFormatter.singleQuote": {
-            "type": "boolean",
-            "default": false,
-            "description": "Use single quotes instead of double quotes"
-          },
-          "scssFormatter.trailingComma": {
-            "type": "string",
-            "default": "es5",
-            "enum": [
-              "es5",
-              "none",
-              "all"
-            ],
-            "description": "Print trailing commas wherever possible when multi-line"
-          }
-        }
-      }
-    ]
   },
   "scripts": {
     "deploy": "vsce publish",
@@ -120,5 +60,66 @@
     "vsce": "^2.7.0",
     "webpack": "^5.70.0",
     "webpack-cli": "^4.9.2"
+  },
+  "publisher": "sibiraj-s",
+  "icon": "assets/sass.png",
+  "categories": [
+    "Formatters"
+  ],
+  "activationEvents": [
+    "onCommand:scssFormatter.showOutput",
+    "onCommand:scssFormatter.clearOutput",
+    "onLanguage:css",
+    "onLanguage:scss"
+  ],
+  "main": "./dist/extension.js",
+  "browser": "./dist/web/extension.js",
+  "capabilities": {
+    "virtualWorkspaces": true,
+    "untrustedWorkspaces": {
+      "supported": true
+    }
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "scssFormatter.showOutput",
+        "title": "%scssFormatter.commands.showOutput.title%",
+        "category": "SCSS Formatter"
+      },
+      {
+        "command": "scssFormatter.clearOutput",
+        "title": "%scssFormatter.commands.clearOutput.title%",
+        "category": "SCSS Formatter"
+      }
+    ],
+    "configuration": [
+      {
+        "type": "object",
+        "title": "SCSS Formatter",
+        "properties": {
+          "scssFormatter.printWidth": {
+            "type": "number",
+            "default": 120,
+            "description": "%scssFormatter.config.printWidth.description%"
+          },
+          "scssFormatter.singleQuote": {
+            "type": "boolean",
+            "default": false,
+            "description": "%scssFormatter.config.singleQuote.description%"
+          },
+          "scssFormatter.trailingComma": {
+            "type": "string",
+            "default": "es5",
+            "enum": [
+              "es5",
+              "none",
+              "all"
+            ],
+            "description": "%scssFormatter.config.singleQuote.description%"
+          }
+        }
+      }
+    ]
   }
 }

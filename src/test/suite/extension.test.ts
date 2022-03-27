@@ -5,12 +5,12 @@ import * as postcssPlugin from 'prettier/parser-postcss';
 import { commands, Uri, window, workspace } from 'vscode';
 
 const showOutputConsole = async () => {
-  await commands.executeCommand('scss-formatter.output.show');
+  await commands.executeCommand('scssFormatter.showOutput');
 };
 
 // clear console output from formatter
 const clearOutput = async () => {
-  await commands.executeCommand('scss-formatter.output.clear');
+  await commands.executeCommand('scssFormatter.clearOutput');
 };
 
 /**

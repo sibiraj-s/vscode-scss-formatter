@@ -1,0 +1,8 @@
+{
+  "scssFormatter.description": "A Visual Studio Code Extension to format SCSS",
+  "scssFormatter.commands.showOutput.title": "Show Output",
+  "scssFormatter.commands.clearOutput.title": "Clear Output",
+  "scssFormatter.config.printWidth.description": "Specify the line length that the formatter will wrap on",
+  "scssFormatter.config.singleQuote.description": "Use single quotes instead of double quotes",
+  "scssFormatter.config.trailingComma.description": "Print trailing commas wherever possible when multi-line"
+}
