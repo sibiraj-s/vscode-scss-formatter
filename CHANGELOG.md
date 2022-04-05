@@ -13,6 +13,14 @@ All notable changes to this project will be documented in this file.
 > - Documentation
 > - Internal
 
+## v2.4.2 (2022-04-05)
+
+#### Dependency Updates
+
+- update `prettier` to v2.6.2 ([e326370](https://github.com/sibiraj-s/vscode-scss-formatter/commit/e326370))
+- update `webpack` to v5.71.0 ([9526dba](https://github.com/sibiraj-s/vscode-scss-formatter/commit/9526dba))
+- update `@types/vscode` to v1.66.0 ([1c73a52](https://github.com/sibiraj-s/vscode-scss-formatter/commit/1c73a52))
+
 ## v2.4.1 (2022-03-26)
 
 #### Bug Fixes
