@@ -121,5 +121,8 @@
         }
       }
     ]
+  },
+  "sponsor": {
+    "url": "https://github.com/sponsors/sibiraj-s"
   }
 }
