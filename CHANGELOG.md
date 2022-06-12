@@ -13,6 +13,12 @@ All notable changes to this project will be documented in this file.
 > - Documentation
 > - Internal
 
+## v2.4.3 (2022-06-11)
+
+- update `typescript` to v4.7.3 ([85d09ee](https://github.com/sibiraj-s/vscode-scss-formatter/commit/85d09ee))
+- update `webpack` to v5.73.0 ([238ea6a](https://github.com/sibiraj-s/vscode-scss-formatter/commit/238ea6a))
+- update `vsce` to v2.9.1 ([0bacef6](https://github.com/sibiraj-s/vscode-scss-formatter/commit/0bacef6))
+
 ## v2.4.2 (2022-04-05)
 
 #### Dependency Updates

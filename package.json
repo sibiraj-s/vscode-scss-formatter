@@ -2,7 +2,7 @@
   "name": "vscode-scss-formatter",
   "displayName": "SCSS Formatter",
   "description": "%scssFormatter.description%",
-  "version": "2.4.2",
+  "version": "2.4.3",
   "author": "sibiraj-s",
   "licence": "MIT",
   "private": true,
