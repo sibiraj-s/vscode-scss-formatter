@@ -116,7 +116,7 @@
               "none",
               "all"
             ],
-            "description": "%scssFormatter.config.singleQuote.description%"
+            "description": "%scssFormatter.config.trailingComma.description%"
           }
         }
       }
