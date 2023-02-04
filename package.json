@@ -33,7 +33,7 @@
     "prepare": "is-ci || husky install"
   },
   "dependencies": {
-    "prettier": "^2.8.1"
+    "prettier": "^2.8.3"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.4.2",
