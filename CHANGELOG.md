@@ -15,14 +15,18 @@ All notable changes to this project will be documented in this file.
 
 ## v2.4.4 (2022-12-11)
 
-- update `prettier` to v2.6.2 ([a682729](https://github.com/sibiraj-s/vscode-scss-formatter/commit/a682729))
-- update `typescript` to v4.7.3 ([212a61e](https://github.com/sibiraj-s/vscode-scss-formatter/commit/212a61e))
+#### Dependency Updates
+
+- update `prettier` to v2.8.1 ([a682729](https://github.com/sibiraj-s/vscode-scss-formatter/commit/a682729))
+- update `typescript` to v4.9.4 ([212a61e](https://github.com/sibiraj-s/vscode-scss-formatter/commit/212a61e))
 - update `webpack` to v5.75.0 ([96fb1e5](https://github.com/sibiraj-s/vscode-scss-formatter/commit/96fb1e5))
-- update `vsce` to v2.9.1 ([14439b6](https://github.com/sibiraj-s/vscode-scss-formatter/commit/14439b6))
-- update `@types/vscode` to v1.66.0 ([327d0cd](https://github.com/sibiraj-s/vscode-scss-formatter/commit/327d0cd))
+- update `vsce` to v2.15.0 ([14439b6](https://github.com/sibiraj-s/vscode-scss-formatter/commit/14439b6))
+- update `@types/vscode` to v1.74.0 ([327d0cd](https://github.com/sibiraj-s/vscode-scss-formatter/commit/327d0cd))
 - update nodejs to v18 ([c8f266f](https://github.com/sibiraj-s/vscode-scss-formatter/commit/c8f266f))
 
 ## v2.4.3 (2022-06-11)
+
+#### Dependency Updates
 
 - update `typescript` to v4.7.3 ([85d09ee](https://github.com/sibiraj-s/vscode-scss-formatter/commit/85d09ee))
 - update `webpack` to v5.73.0 ([238ea6a](https://github.com/sibiraj-s/vscode-scss-formatter/commit/238ea6a))
