@@ -67,8 +67,6 @@
     "Formatters"
   ],
   "activationEvents": [
-    "onCommand:scssFormatter.showOutput",
-    "onCommand:scssFormatter.clearOutput",
     "onLanguage:css",
     "onLanguage:scss"
   ],
