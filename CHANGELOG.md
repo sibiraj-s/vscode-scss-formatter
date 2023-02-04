@@ -13,6 +13,18 @@ All notable changes to this project will be documented in this file.
 > - Documentation
 > - Internal
 
+## v2.4.5 (2023-02-04)
+
+#### Dependency Updates
+
+- update `prettier` to v2.8.3 ([1e01cda](https://github.com/sibiraj-s/vscode-scss-formatter/commit/1e01cda))
+- update `@vscode/vsce` to v2.17.0 ([6b325fb](https://github.com/sibiraj-s/vscode-scss-formatter/commit/6b325fb))
+- update `typescript` to v4.9.5 ([6b325fb](https://github.com/sibiraj-s/vscode-scss-formatter/commit/6b325fb))
+
+#### Enhancements
+
+- remove deprecated activation events ([be469f7](https://github.com/sibiraj-s/vscode-scss-formatter/commit/be469f7))
+
 ## v2.4.4 (2022-12-11)
 
 #### Dependency Updates
