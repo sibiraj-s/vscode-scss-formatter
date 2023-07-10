@@ -1,6 +1,6 @@
 import type { BuiltInParserName, Options as PrettierOptions } from 'prettier';
 import { format } from 'prettier/standalone';
-import * as postcssPlugin from 'prettier/parser-postcss';
+import * as postcssPlugin from 'prettier/plugins/postcss';
 import { TextDocument, workspace, type WorkspaceConfiguration, type FormattingOptions, languages } from 'vscode';
 
 import LoggingService from './LoggingService';
@@ -39,7 +39,7 @@ class FormatService {
     this.provider = new FormatProvider(this.formatDocument);
   }
 
-  private formatDocument = (document: TextDocument, options: FormattingOptions): string => {
+  private formatDocument = async (document: TextDocument, options: FormattingOptions): Promise<string> => {
     const rawDocumentText = document.getText();
     const { fileName } = document;
 
@@ -49,7 +49,7 @@ class FormatService {
       const formattedDocument = format(rawDocumentText, prettierOptions);
       this.loggingService.addToOutput(`${fileName} : Formatted Successfully`);
       this.statusbarService.updateStatusBarItem(FormatterStatus.Success);
-      return formattedDocument;
+      return await formattedDocument;
     } catch (err) {
       const errMessage = err instanceof Error ? err.message : String(err);
       this.loggingService.addToOutput(addFilePathToMesssage(errMessage, fileName));

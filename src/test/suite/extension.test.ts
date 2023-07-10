@@ -1,7 +1,7 @@
 /* tslint:disable: no-console */
 import * as assert from 'assert';
 import { format } from 'prettier/standalone';
-import * as postcssPlugin from 'prettier/parser-postcss';
+import * as postcssPlugin from 'prettier/plugins/postcss';
 import { commands, Uri, window, workspace } from 'vscode';
 
 const showOutputConsole = async () => {
@@ -57,7 +57,7 @@ const formatSameAsPrettier = async (file: string) => {
   const result = await formatWithVscode('fixtures', file);
 
   if (result) {
-    const prettierFormatted = format(result.source, {
+    const prettierFormatted = await format(result.source, {
       filepath: file,
       printWidth: 120,
       singleQuote: false,

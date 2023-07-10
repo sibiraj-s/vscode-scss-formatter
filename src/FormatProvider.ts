@@ -10,13 +10,13 @@ const fullDocumentRange = (document: TextDocument): Range => {
   return new Range(rangeStart, rangeEnd);
 };
 
-type Format = (document: TextDocument, options: FormattingOptions) => string;
+type Formatter = (document: TextDocument, options: FormattingOptions) => Promise<string>;
 
 class FormatProvider implements DocumentFormattingEditProvider {
-  constructor(private format: Format) { }
+  constructor(private format: Formatter) { }
 
-  public provideDocumentFormattingEdits(document: TextDocument, options: FormattingOptions): TextEdit[] {
-    const formattedDocument = this.format(document, options);
+  public async provideDocumentFormattingEdits(document: TextDocument, options: FormattingOptions): Promise<TextEdit[]> {
+    const formattedDocument = await this.format(document, options);
     return [TextEdit.replace(fullDocumentRange(document), formattedDocument)];
   }
 }
