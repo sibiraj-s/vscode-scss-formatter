@@ -12,6 +12,10 @@ jobs:
     name: Publish to Markeplace
     runs-on: macos-latest
 
+    environment:
+      name: marketplace
+      url: ${{ vars.MARKETPLACE_URL }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3
