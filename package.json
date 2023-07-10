@@ -14,7 +14,7 @@
   "homepage": "https://marketplace.visualstudio.com/items?itemName=sibiraj-s.vscode-scss-formatter",
   "engines": {
     "node": ">=18.0.0",
-    "vscode": "^1.79.1"
+    "vscode": "^1.80.0"
   },
   "scripts": {
     "deploy": "vsce publish",
@@ -40,7 +40,7 @@
     "@commitlint/config-conventional": "^17.6.6",
     "@types/mocha": "^10.0.1",
     "@types/node": "^18.16.19",
-    "@types/vscode": "^1.79.1",
+    "@types/vscode": "^1.80.0",
     "@types/webpack-env": "^1.18.1",
     "@vscode/test-electron": "^2.3.3",
     "@vscode/test-web": "^0.0.44",
