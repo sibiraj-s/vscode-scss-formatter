@@ -39,7 +39,7 @@
     "@commitlint/cli": "^17.6.6",
     "@commitlint/config-conventional": "^17.6.6",
     "@types/mocha": "^10.0.1",
-    "@types/node": "^20.3.3",
+    "@types/node": "^18.16.19",
     "@types/vscode": "^1.79.1",
     "@types/webpack-env": "^1.18.1",
     "@vscode/test-electron": "^2.3.3",
