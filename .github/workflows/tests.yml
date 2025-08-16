@@ -1,15 +1,18 @@
-permissions:
-  contents: read
 name: Tests
 
 on:
   push:
-    branches: master
+    branches:
+      - master
   pull_request:
-    branches: master
+    branches:
+      - master
 
 env:
-  NODE_VERSION: 20
+  NODE_VERSION: 22
+
+permissions:
+  contents: read
 
 jobs:
   test:

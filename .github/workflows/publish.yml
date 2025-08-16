@@ -2,16 +2,19 @@ name: Publish
 
 on:
   push:
-    tags: v*
+    tags:
+      - v*
 
 env:
   NODE_VERSION: 22
 
+permissions:
+  contents: read
+
 jobs:
   test:
     name: Publish to Markeplace
-    permissions:
-      contents: read
+
     runs-on: macos-latest
 
     environment:
