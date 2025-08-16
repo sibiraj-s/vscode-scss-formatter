@@ -10,6 +10,8 @@ env:
 jobs:
   test:
     name: Publish to Markeplace
+    permissions:
+      contents: read
     runs-on: macos-latest
 
     environment:
