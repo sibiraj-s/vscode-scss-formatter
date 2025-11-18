@@ -11,7 +11,7 @@ package-lock.json
 vsc-extension-quickstart.md
 webpack.config.js
 **/tsconfig.json
-**/.eslintrc.json
+**/.oxlintrc.json
 **/*.map
 **/*.ts
 .gitattributes

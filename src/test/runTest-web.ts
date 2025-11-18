@@ -26,7 +26,7 @@ const main = async () => {
       folderPath: extensionTestWorkspace,
       waitForDebugger: waitForDebugger ? Number(waitForDebugger.slice(attachArgName.length)) : undefined,
     });
-  } catch (err) {
+  } catch {
     console.error('Failed to run tests');
     process.exit(1);
   }
