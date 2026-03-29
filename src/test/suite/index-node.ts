@@ -1,6 +1,6 @@
 import * as path from 'path';
-import * as Mocha from 'mocha';
-import * as glob from 'fast-glob';
+import Mocha from 'mocha';
+import glob from 'fast-glob';
 
 export const run = async (): Promise<void> => {
   // Create the mocha test
