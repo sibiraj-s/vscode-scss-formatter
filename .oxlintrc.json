@@ -7,6 +7,5 @@
     "oxc",
     "promise",
     "node",
-    "regex",
   ],
 }
