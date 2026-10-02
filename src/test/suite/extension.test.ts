@@ -2,7 +2,7 @@
 import * as assert from 'assert';
 import { format } from 'prettier/standalone';
 import * as postcssPlugin from 'prettier/plugins/postcss';
-import { commands, Uri, window, workspace } from 'vscode';
+import { commands, extensions, Uri, workspace, WorkspaceEdit, type FormattingOptions, type TextEdit } from 'vscode';
 
 const showOutputConsole = async () => {
   await commands.executeCommand('scssFormatter.showOutput');
@@ -25,27 +25,35 @@ const formatWithVscode = async (
 ): Promise<{
   result: string;
   source: string;
-} | null> => {
+}> => {
   const workspaceFolder = workspace.workspaceFolders?.find((folder) => folder.name === workspaceFolderName);
 
   if (!workspaceFolder) {
     throw new Error(`Unable to find workspace: ${workspaceFolder}`);
   }
 
+  // make sure the formatting provider is registered before asking for edits
+  await extensions.getExtension('sibiraj-s.vscode-scss-formatter')?.activate();
+
   const absPath = Uri.joinPath(workspaceFolder.uri, file).path;
   const doc = await workspace.openTextDocument(absPath);
   const text = doc.getText();
 
-  try {
-    await window.showTextDocument(doc);
-    console.time(file);
-    await commands.executeCommand('editor.action.formatDocument');
-    console.timeEnd(file);
-    return { result: doc.getText(), source: text };
-  } catch (e) {
-    console.error(e);
-    return null;
+  // request edits from the provider directly instead of formatting the active editor,
+  // so the result doesn't depend on which editor has focus
+  const options: FormattingOptions = { tabSize: 2, insertSpaces: true };
+  console.time(file);
+  const edits = await commands.executeCommand<TextEdit[]>('vscode.executeFormatDocumentProvider', doc.uri, options);
+  console.timeEnd(file);
+
+  if (!edits?.length) {
+    throw new Error(`No formatting edits returned for ${file}`);
   }
+
+  const workspaceEdit = new WorkspaceEdit();
+  workspaceEdit.set(doc.uri, edits);
+  await workspace.applyEdit(workspaceEdit);
+  return { result: doc.getText(), source: text };
 };
 
 /**
@@ -56,20 +64,18 @@ const formatWithVscode = async (
 const formatSameAsPrettier = async (file: string) => {
   const result = await formatWithVscode('fixtures', file);
 
-  if (result) {
-    const prettierFormatted = await format(result.source, {
-      filepath: file,
-      printWidth: 120,
-      singleQuote: false,
-      tabWidth: 2,
-      useTabs: false,
-      trailingComma: 'es5',
-      plugins: [
-        postcssPlugin,
-      ],
-    });
-    assert.strictEqual(result.result, prettierFormatted);
-  }
+  const prettierFormatted = await format(result.source, {
+    filepath: file,
+    printWidth: 120,
+    singleQuote: false,
+    tabWidth: 2,
+    useTabs: false,
+    trailingComma: 'es5',
+    plugins: [
+      postcssPlugin,
+    ],
+  });
+  assert.strictEqual(result.result, prettierFormatted);
 };
 
 suite('SCSS Formatter Extension Tests', () => {

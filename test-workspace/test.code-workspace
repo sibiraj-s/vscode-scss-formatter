@@ -7,6 +7,8 @@
   "settings": {
     "editor.detectIndentation": false,
     "editor.tabSize": 2,
+    "css.format.enable": false,
+    "scss.format.enable": false,
     "[css]": {
       "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
     },
